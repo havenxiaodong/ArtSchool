@@ -1,0 +1,23 @@
+﻿@model School.Models.ImgBboxSet
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+           <div class="conhead">
+                        <p>首页图片</p>
+                    <div class="titleedit">      
+                        <span>题目 : </span>
+                        <input name="Title" type="text" class ="text" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp日期 : </span>
+                        <input name="Date" class ="text" type="text" />
+                        <span>新闻链接 : </span>
+                        <input name="link" type="text" class ="text" /><br /><br />
+                        <span>图片 :</span>
+                        <input type="text" name="Picture" class="text" id="xFilePath" />
+                        <input type="button"  value="上 传" onclick="BrowseServer()" />
+                    </div>
+           </div>                                   
+           <div class="consub">
+           <input type="submit" value="提交" id="button" />
+           </div>
+}
+
+

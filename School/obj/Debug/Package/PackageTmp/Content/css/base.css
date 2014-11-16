@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2014-09-10 18:17:54
+ * @version $Id$
+ */
+ body{
+    background: #fff;
+ }
+   *{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+   }
+    #left{
+        width: 15.83%;
+        height:auto;
+        min-height:818px;
+        background:#747474;
+        float: left;
+        overflow: hidden;
+    }
+    #right{
+        width:84.17%;
+        height:auto;
+        min-height:788px;
+        float: right;
+        overflow: hidden;
+        position:relative;
+    }
+    .lone{
+        height: 119px;
+        padding-top:14px;
+        padding-left: 60px; 
+    }
+    .lone ul li,.ltwo ul li{
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 3px;
+        font-family: Arial;
+    }
+    .lone ul li a,.ltwo ul li a
+    {
+        color:#fff;
+        text-decoration:none;}
+    .ltwo{
+        min-height: 324px;
+        padding-top:14px;
+        padding-left: 60px; 
+    }
+#content{
+    width: 91.418%;
+    height: auto;
+    margin:27px 3.853% 31px 4.729%;
+}
+#adim{
+        height: 28px;
+        line-height: 28px;
+        font-size: 20px;
+        width: 132px;
+        position: absolute;
+        top:59px;
+        left:316px;
+        background-color: transparent;
+        color: #63A9E5;
+}

@@ -1,0 +1,509 @@
+﻿@{
+    ViewBag.Title = "历史沿革";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>艺术与设计学院</title>
+<link rel="shortcut icon" href="" type="image/x-icon" />
+<link rel="stylesheet" href="../css/base.css"/>
+<link rel="stylesheet" href="../css/pc/school_intro.css" id="style"/>
+<script src="../content/js/seajs/sea.js" data-main="modules/school_intro"></script>
+<style type="text/css">
+#table1{
+	height:491px;
+	width:835px;
+	position:relative;
+	top:0px;
+	left:1px;
+	font-size:16px;
+}
+#table1 tr {
+	border:#D5515F 1px solid;
+	margin:0;
+}
+#table1 td {
+	border:1px solid #D5515F;
+	margin:0;
+}
+#table1_top {
+	height:32px;
+	width:833px;
+	position:relative;
+	top:0px;
+	left:1px;
+	border-left:1px solid #D5515F;
+	border-right:1px solid #D5515F;
+	border-top:0;
+	border-bottom:0;
+	line-height:17px;
+	font-weight:bold;
+}
+#table1_top1 {
+	height:32px;
+	width:80px;
+	border-right:1px solid #D5515F;
+	float:left;
+}
+#table1_top2 {
+	height:32px;
+	width:115px;
+	border-right:1px solid #D5515F;
+	float:left;
+}
+#table1_top3 {
+	height:32px;
+	width:141px;
+	border-right:1px solid #D5515F;
+	float:left;
+}
+#table1_top4 {
+	height:32px;
+	width:379px;
+	border-right:1px solid #D5515F;
+	float:left;
+}
+#table1_top5 {
+	height:32px;
+	width:114px;
+	float:left;
+}
+#table1_bottom {
+	height:72px;
+	width:833px;
+	position:relative;
+	top:0px;
+	left:1px;
+	border-left:1px solid #D5515F;
+	border-right:1px solid #D5515F;
+	border-top:0;
+	border-bottom:0;
+}
+#table1_bottom1 {
+	height:72px;
+	width:80px;
+	border-right:1px solid #D5515F;
+	float:left;
+	line-height:80px;
+}
+#table1_bottom2 {
+	height:72px;
+	width:115px;
+	border-right:1px solid #D5515F;
+	float:left;
+	line-height:80px;
+}
+#table1_bottom3 {
+	height:72px;
+	width:141px;
+	border-right:1px solid #D5515F;
+	float:left;
+	line-height:80px;
+}
+#table1_bottom4 {
+	height:48px;
+	width:328px;
+	border-right:1px solid #D5515F;
+	float:left;
+	padding-top:24px;
+	padding-left:24px;
+	padding-right:27px;
+}
+#table1_bottom5 {
+	height:72px;
+	width:114px;
+	float:left;
+	line-height:80px;
+}
+.table2{
+	width:560px;
+	height:185px;
+	margin:auto;
+	color:#373737;
+	}
+.padding1 {
+	padding-left:24px;
+	padding-right:27px;
+}
+#position1 {
+	height:3px;
+	width:80px;
+	background-color:#FFF;
+	position:absolute;
+	top:958px;
+	left:270px;
+	z-index:3;
+}
+.font_size22{
+	font-size:22px;
+	}
+.font_size16{
+	font-size:16px;
+	}
+#content_history{
+	height:2130px;
+	}
+#zhuanyebiangeng{
+	width:927px;
+	height:1000px;
+	background-color:#FFF;
+	margin:auto;
+	}
+</style>
+</head>
+<body>
+<div class="nav"> <a href="@Url.Action("Index","Home")"><img src="../content/images/rCollegeLg.jpg"class="fl" id="logo"/></a>
+  <ul class="firstNav">
+                    <li ><a href="@Url.Action("school_intro","Home")">学院概况</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("school_intro","Home")">学院简介</a></li>
+                            <li><a href="@Url.Action("school_history","Home")">历史沿革</a></li>
+                            <li><a href="@Url.Action("school_nowleader","Home")">现任领导</a></li>
+                            <li><a href="">系所机构</a></li>
+                            <li><a href="">学院方位图</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Action("_TeaList1","TeaTeam")">师资队伍</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_TeaList1","TeaTeam")">艺术设计</a></li>
+                            <li><a href="@Url.Action("_TeaList2", "TeaTeam")">工业设计</a></li>
+                            <li><a href="@Url.Action("_TeaList2", "TeaTeam")">音乐系</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Subject")">学科建设</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","Subject")">办学体系</a></li>
+                            <li><a href="@Url.Action("_Index2","Subject")">学科设置</a></li>
+                            <li><a href="@Url.Action("_Index3","Subject")">硕士点</a></li>
+                            <li><a href="@Url.Action("_Index4","Subject")">学术交流</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","zhuanye")">专业建设</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","zhuanye")">教学团队</a></li>
+                            <li><a href="@Url.Action("_Index2","zhuanye")">专业介绍</a></li>
+                            <li><a href="@Url.Action("_Index3","zhuanye")">培养方案</a></li>
+                            <li><a href="@Url.Action("_Index4","zhuanye")">特色专业</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Jwguanli")">教务管理</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","Jwguanli")">制度文件</a></li>
+                            <li><a href="@Url.Action("_Index2","Jwguanli")">教务通知</a></li>
+                            <li><a href="@Url.Action("_Index3","Jwguanli")">实践教学</a></li>
+                            <li><a href="@Url.Action("_Index4","Jwguanli")">工作流程</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Science")">科学研究</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","Science")">科研机构</a></li>
+                            <li><a href="@Url.Action("_Index2","Science")">科研通知</a></li>
+                            <li><a href="@Url.Action("_Index3","Science")">科研成果</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Dqwork")">党群工作</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1", "Dqwork")">理论学习</a></li>
+                            <li><a href="@Url.Action("_Index2","Dqwork")">组织机构</a></li>
+                            <li><a href="@Url.Action("_Index3", "Dqwork")">制度建设</a></li>
+                            <li><a href="@Url.Action("_Index4", "Dqwork")">党群动态</a></li>
+                            <li><a href="@Url.Action("_Index5", "Dqwork")">学院党校</a></li>
+                            <li><a href="@Url.Action("_Index6", "Dqwork")">党支部风采</a></li>
+                            <li><a href="@Url.Action("_Index7", "Dqwork")">党员风采</a></li>
+                            <li><a href="@Url.Action("_Index8", "Dqwork")">党员工作站</a></li>
+                            <li><a href="@Url.Action("_Index9", "Dqwork")">工会教代会</a></li>
+                            <li><a href="@Url.Action("_Index10", "Dqwork")">妇委会</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Txwork")">团学工作</a>
+                        <ul class="secondNav">
+                    <li><a href="@Url.Action("_Index1","Txwork")">思想教育</a></li>
+                    <li><a href="@Url.Action("_Index2", "Txwork")">学风建设</a></li>
+                    <li><a href="@Url.Action("_Index3", "Txwork")">日常管理</a></li>
+                    <li><a href="@Url.Action("_Index4", "Txwork")">奖励工作</a></li>
+                    <li><a href="@Url.Action("_Index5", "Txwork")">团学活动</a></li>
+                    <li><a href="@Url.Action("_Index6", "Txwork")">就业工作</a></li>
+                    <li><a href="@Url.Action("_Index7", "Txwork")">健康教育</a></li>
+                    <li><a href="@Url.Action("_Index8", "Txwork")">创新创业</a></li>
+                    <li><a href="@Url.Action("_Index9", "Txwork")">岁月答疑</a></li>
+                </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("Index","yyfc")">艺苑风采</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("Index","yyfc")">学院风采</a></li>
+                            <li><a href="@Url.Action("Index2","yyfc")">校园电子报</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="last"><a href="@Url.Action("Index","zhuanti")">专题</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("Index","zhuanti")">党的群众路线</a></li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+  <form action="" method="" class="fr search">
+    <input type="text" name="" class="fl"/>
+    <input type="image" src="../content/images/search.png " class="fl">
+  </form>
+</div>
+<div class="header">
+  <div class="bg"></div>
+</div>
+<div class="content" id="content_history">
+  <ul class="con-nav fl">
+    <li><a href="@Url.Action("school_intro","Home")">学院简介</a></li>
+    <li><a href="@Url.Action("school_history","Home")">历史沿革</a></li>
+    <li><a href="@Url.Action("school_nowleader","Home")">现任领导</a></li>
+    <li>系所机构</li>
+    <li>学院方位图</li>
+  </ul> 
+  <div class="con-con fl">
+    <center>
+      <p>现任领导</p>
+    </center>
+    <img src="../content/images/yuanjiao_top.png"/>
+    <div id="table1_top">
+      <div id="table1_top1">
+        <center>
+          部&nbsp;门
+        </center>
+      </div>
+      <div id="table1_top2">
+        <center>
+          职&nbsp;务
+        </center>
+      </div>
+      <div id="table1_top3">
+        <center>
+          姓&nbsp;名
+        </center>
+      </div>
+      <div id="table1_top4">
+        <center>
+          工&nbsp;作&nbsp;分&nbsp;工
+        </center>
+      </div>
+      <div id="table1_top5">
+        <center>
+          电&nbsp;话
+        </center>
+      </div>
+    </div>
+    <table id="table1">
+      <tr height="116px;">
+        <td width="80px;" rowspan="3"><center>
+            党&nbsp;委
+          </center></td>
+        <td width="115px;"><center>
+            书&nbsp;记
+          </center></td>
+        <td width="141px;"><center>
+            施永红
+          </center></td>
+        <td width="328px;" class="padding1">主持学院党委的全面工作，分管党建和思想政治工作，干部工作，纪检监督工作，指导工会和妇委会工作，负责联系设计教学中心</td>
+        <td><center>
+            83591998
+          </center></td>
+      </tr>
+      <tr height="86px;">
+        <td><center>
+            副书记
+          </center></td>
+        <td><center>
+            范韶伟
+          </center></td>
+        <td class="padding1">协助做好党建和思想政治工作，分管学生工作，指导团委工作，负责联系音乐系</td>
+        <td><center>
+            83591978
+          </center></td>
+      </tr>
+      <tr height="86px;">
+        <td><center>
+            院&nbsp;长
+          </center></td>
+        <td><center>
+            井&nbsp;渌
+          </center></td>
+        <td class="padding1">主持学院行政的全面工作，分管人才引进，学科建设，师资队伍建设，国内外学术交流与合作工作</td>
+        <td><center>
+            83591988
+          </center></td>
+      </tr>
+      <tr height="86px">
+        <td rowspan="2" style="padding-top:64px;"><center>
+            行&nbsp;政
+          </center></td>
+        <td><center>
+            副院长
+          </center></td>
+        <td><center>
+            李爱真
+          </center></td>
+        <td class="padding1">分管财务，行政，人事，办公室及消防安全工作，负责联系办公室和实验教学中心</td>
+        <td><center>
+            83591966
+          </center></td>
+      </tr>
+      <tr height="116px;">
+        <td><center>
+            副院长
+          </center></td>
+        <td><center>
+            张&nbsp;昆
+          </center></td>
+        <td class="padding1">分管本科教学，实验教学设备，资料室，大学生竞赛及校外实习基地建设工作，负责联系环境艺术设计系</td>
+        <td><center>
+            83591958
+          </center></td>
+      </tr>
+    </table>
+    <div id="position1"></div>
+    <div id="table1_bottom">
+      <div id="table1_bottom1"></div>
+      <div id="table1_bottom2">
+        <center>
+          副院长
+        </center>
+      </div>
+      <div id="table1_bottom3">
+        <center>
+          罗萍嘉
+        </center>
+      </div>
+      <div id="table1_bottom4">分管科研，研究生工作，协助做好国内外学术交流与合作工作，负责联系工业设计系</div>
+      <div id="table1_bottom5">
+        <center>
+          83591968
+        </center>
+      </div>
+    </div>
+        <img src="../content/images/yuanjiao_bottom.png"/><br/><br/><br/>
+    <center><font size="+2">历任领导</font></center><br/><br/>
+    <center><font size="+2" color="#363636">历任党委（总支）书记</font></center><br/><br/>
+    <table class="table2">
+    	<tr class="font_size22">
+        	<td><center>姓&nbsp;&nbsp;名</center></td>
+            <td><center>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务</center></td>
+            <td><center>任职时间</center></td>
+        </tr>
+    	<tr class="font_size16">
+        	<td><center>段鑫星</center></td>
+            <td><center>艺术与设计学院党总支书记</center></td>
+            <td><center>2003.12~2005.12</center></td>
+        </tr>
+     	<tr class="font_size16">
+        	<td><center>刘建光</center></td>
+            <td><center>艺术与设计学院党总支书记</center></td>
+            <td><center>2005.12~2007.12</center></td>
+        </tr>
+     	<tr class="font_size16">
+        	<td><center>施永红</center></td>
+            <td><center>艺术与设计学院党委书记</center></td>
+            <td><center>2007.12~</center></td>
+        </tr>                      
+    </table>
+    <br/><br/>
+    <center><font size="+2" color="#363636">历任院长，常务副院长</font></center><br/><br/>
+    <table class="table2">
+    	<tr class="font_size22">
+        	<td><center>姓&nbsp;&nbsp;名</center></td>
+            <td><center>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务</center></td>
+            <td><center>任职时间</center></td>
+        </tr>
+    	<tr class="font_size16">
+        	<td><center>尹定邦</center></td>
+            <td><center>艺术与设计学院名誉院长</center></td>
+            <td><center>2003.12~2007.12</center></td>
+        </tr>
+     	<tr class="font_size16">
+        	<td><center>井&nbsp;&nbsp;渌</center></td>
+            <td><center>艺术与设计学院常务副院长</center></td>
+            <td><center>2003.12~2007.12</center></td>
+        </tr>
+     	<tr class="font_size16">
+        	<td><center>井&nbsp;&nbsp;渌</center></td>
+            <td><center>艺术与设计学院院长</center></td>
+            <td><center>2007.12~</center></td>
+        </tr>                      
+    </table>
+    <br/><br/>    
+    <center><font size="+2" color="#363636">历任党委（总支）副书记</font></center><br/><br/>
+    <table class="table2">
+    	<tr class="font_size22">
+        	<td><center>姓&nbsp;&nbsp;名</center></td>
+            <td><center>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务</center></td>
+            <td><center>任职时间</center></td>
+        </tr>
+    	<tr class="font_size16">
+        	<td><center>田晓冬</center></td>
+            <td><center>艺术与设计学院党总支副书记</center></td>
+            <td><center>2003.12~2004.10</center></td>
+        </tr>
+     	<tr class="font_size16">
+        	<td><center>翟金玉</center></td>
+            <td><center>艺术与设计学院党总支副书记</center></td>
+            <td><center>2004.10~2007.12</center></td>
+        </tr>
+     	<tr class="font_size16">
+        	<td><center>翟金玉</center></td>
+            <td><center>艺术与设计学院党委副书记</center></td>
+            <td><center>2007.12~2010.4</center></td>
+        </tr>  
+     	<tr class="font_size16">
+        	<td><center>王&nbsp;&nbsp;清</center></td>
+            <td><center>艺术与设计学院党委副书记</center></td>
+            <td><center>2010.4~2013.5</center></td>
+        </tr>                             
+    </table>
+    <br/><br/>
+    <center><font size="+2" color="#363636">历任副院长</font></center><br/><br/>
+    <table class="table2">
+    	<tr class="font_size22">
+        	<td><center>姓&nbsp;&nbsp;名</center></td>
+            <td><center>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务</center></td>
+            <td><center>任职时间</center></td>
+        </tr>
+    	<tr class="font_size16">
+        	<td><center>田晓冬</center></td>
+            <td><center>艺术与设计学院副院长</center></td>
+            <td><center>2003.12~2012.5</center></td>
+        </tr>
+     	<tr class="font_size16">
+        	<td><center>曾维鑫</center></td>
+            <td><center>艺术与设计学院副院长</center></td>
+            <td><center>2003.12~2007.12</center></td>
+        </tr>
+     	<tr class="font_size16">
+        	<td><center>李爱真</center></td>
+            <td><center>艺术与设计学院副院长</center></td>
+            <td><center>2003.12~</center></td>
+        </tr>  
+     	<tr class="font_size16">
+        	<td><center>张&nbsp;&nbsp;昆</center></td>
+            <td><center>艺术与设计学院副院长</center></td>
+            <td><center>2007.12~</center></td>
+        </tr>  
+     	<tr class="font_size16">
+        	<td><center>罗萍嘉</center></td>
+            <td><center>艺术与设计学院科研副院长</center></td>
+            <td><center>2012.5~</center></td>
+        </tr>                                      
+    </table>
+    </div>
+
+    </div>
+        <div id="zhuanyebiangeng"></div>
+</div>
+</body>
+</html>

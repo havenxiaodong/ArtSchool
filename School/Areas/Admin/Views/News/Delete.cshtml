@@ -1,0 +1,33 @@
+﻿@model School.Models.NewsSet
+<fieldset>
+    <h3>标题</h3>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <h3>类别</h3>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Kind)
+    </div>
+
+    <h3>时间</h3>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+
+    <h3>作者</h3>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Writer)
+    </div>
+
+    <h3>状态</h3>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Checked)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="删除" /> |
+        @Html.ActionLink("返回新闻列表", "Index")
+    </p>
+}

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<School.Models.NewsSet>
+
+ <div class="newsBox college-news fl">
+            <span class="fl"><a href="@Url.Action("Index","NewsList")">学院新闻</a></span>
+            <a href="@Url.Action("Index","NewsList")" class="fr">more</a>
+            <ul>
+            @{
+                int k = 1;
+                foreach(var item in Model)
+                {
+                   <li><i></i> @Html.ActionLink((k++).ToString() + "." + item.Title, "Detials", new { id = item.ID })&nbsp<em>...</em><span>@DataBinder.Eval(item.Date, "date", "{0:MM-dd}")</span></li>
+                }
+                }
+                
+            </ul>
+        </div>

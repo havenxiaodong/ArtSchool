@@ -1,0 +1,43 @@
+﻿@model School.Models.dqworkSet
+
+@{
+    ViewBag.Title = "党群工作";
+}
+
+<h2>党群工作</h2>
+
+<h3>你确定要删除这条信息吗？</h3>
+<fieldset>
+    <legend>团学工作管理</legend>
+
+    <div class="display-label">标题</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">时间</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.time)
+    </div>
+
+    <div class="display-label">类别</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.kind)
+    </div>
+
+    <div class="display-label">作者</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.writer)
+    </div>
+
+    <div class="display-label">正文</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.content)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="删除" /> |
+        @Html.ActionLink("返回列表", "Index")
+    </p>
+}

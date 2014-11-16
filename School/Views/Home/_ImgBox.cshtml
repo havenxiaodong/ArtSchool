@@ -1,0 +1,25 @@
+﻿@model IEnumerable<School.Models.ImgBboxSet>
+
+<div class="content">
+        <div class="banner">
+            <ul class="show">
+                
+                @{
+                    foreach(var dd in Model)
+                    {
+                        
+                        <li class="imgsp1"><a href="@dd.link"><img src="@dd.Picture" /></a></li>
+                    }
+                }
+                
+            </ul>
+            <ol class="number">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+
+            </ol>
+
+        </div>

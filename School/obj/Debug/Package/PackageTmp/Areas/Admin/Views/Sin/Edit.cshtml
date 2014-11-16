@@ -1,0 +1,31 @@
+﻿@model School.Models.scienceSet
+@using (Html.BeginForm())
+{
+           @Html.ValidationSummary(true)
+           <div class="conhead">
+                        <p>科学研究</p>
+                    <div class="titleedit">       
+                        <span>题目 : </span>
+                        <input name="title" type="text" class ="text" value="@Model.title" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp类别 : </span>
+                        <select id="Select1" name="kind" class="select">
+                            <option>科研机构</option>
+                            <option>科研通知</option>
+                            <option>科研成果</option>
+                        </select>
+                        <span>作者 : </span>
+                        <input name="writer" type="text" class ="text" value="@Model.writer" /><br/><br/>
+                        <span>日期 : </span>
+                        <input name="time" class ="text" type="text" value="@DateTime.Now.ToLocalTime()" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp附件 :</span>
+                        <input type="text" name="file" class="text" id="xFilePath" value="@Model.file" />
+                        <input type="button"  value="上 传" onclick="BrowseServer()" />
+                    </div>
+           </div>                                     
+           <div>
+                <script name ="Content" id="editor" type="text/plain" style="width:1024px;height:500px;">@Html.Raw(@Model.content)</script>
+           </div>
+           <div class="consub">
+           <input type="submit" value="提交" id="button" />
+           </div>
+}

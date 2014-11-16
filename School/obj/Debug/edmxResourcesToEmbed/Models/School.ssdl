@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="school2014Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="school2014ModelStoreContainer">
+    <EntitySet Name="Activity" EntityType="school2014Model.Store.Activity" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Admin" EntityType="school2014Model.Store.Admin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="dqwork" EntityType="school2014Model.Store.dqwork" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImgBbox" EntityType="school2014Model.Store.ImgBbox" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="jingpin" EntityType="school2014Model.Store.jingpin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="jwmanger" EntityType="school2014Model.Store.jwmanger" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="News" EntityType="school2014Model.Store.News" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Notices" EntityType="school2014Model.Store.Notices" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="science" EntityType="school2014Model.Store.science" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Subject" EntityType="school2014Model.Store.Subject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="school2014Model.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TeaTeam" EntityType="school2014Model.Store.TeaTeam" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tszh" EntityType="school2014Model.Store.Tszh" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="txwork" EntityType="school2014Model.Store.txwork" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="wangluo" EntityType="school2014Model.Store.wangluo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ywshow" EntityType="school2014Model.Store.ywshow" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="zhuanye" EntityType="school2014Model.Store.zhuanye" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ztmanger" EntityType="school2014Model.Store.ztmanger" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PassWord" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Role" Type="nvarchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="dqwork">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="file" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ImgBbox">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Picture" Type="nvarchar" MaxLength="50" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="link" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="jingpin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="video" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="img" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="content" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="pingjia" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="jwmanger">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="file" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Kind" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Writer" Type="nvarchar" MaxLength="50" />
+    <Property Name="Checked" Type="nvarchar" MaxLength="50" />
+    <Property Name="Content" Type="varchar(max)" />
+    <Property Name="hit" Type="bigint" Nullable="false" />
+    <Property Name="file" Type="nvarchar" MaxLength="350" />
+    <Property Name="picture" Type="text" />
+  </EntityType>
+  <EntityType Name="Notices">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Writer" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="file" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="science">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="file" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="file" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TeaTeam">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="photo" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="job" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="introduce" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="kind" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tszh">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="file" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="txwork">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="writer" Type="varchar(max)" Nullable="false" />
+    <Property Name="content" Type="varchar(max)" Nullable="false" />
+    <Property Name="file" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="wangluo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="write" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="img" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="pingjia" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="video" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="content" Type="nvarchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ywshow">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="varchar(max)" Nullable="false" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="writer" Type="varchar(max)" Nullable="false" />
+    <Property Name="content" Type="varchar(max)" Nullable="false" />
+    <Property Name="file" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="zhuanye">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="file" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ztmanger">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="time" Type="datetime" Nullable="false" />
+    <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="file" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+</Schema>

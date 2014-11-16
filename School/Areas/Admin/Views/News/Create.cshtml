@@ -1,0 +1,32 @@
+﻿@model School.Models.NewsSet
+
+@using (Html.BeginForm())
+{
+           @Html.ValidationSummary(true) 
+           <div class="conhead">
+                        <p>文章添加</p>
+                    <div class="titleedit">
+                                
+                        <span>题目 : </span>
+                        <input name="Title" type="text" class ="text" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp类别 : </span>
+                        <select id="Select2" name="kind" class="select">
+                                        <option>艺术学院</option>
+                                        <option>新闻中心</option>
+                                        </select><br/><br/>
+                        <span>作者 : </span>
+                        <input name="Writer" type="text" class ="text" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp日期 : </span>
+                        <input name="Date" class ="text" type="text" value="@DateTime.Now.ToLocalTime()" />
+                        <span>附件</span>
+                        <input type="text" name="file" class="text" id="xFilePath" />
+                        <input type="button"  value="上 传" onclick="BrowseServer()" />
+                    </div>
+           </div>                                             
+           <div>
+                <script name ="content" id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+           </div>
+           <div class="consub">
+           <input type="submit" value="提交" id="button" />
+           </div>
+}

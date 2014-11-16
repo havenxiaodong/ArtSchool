@@ -1,0 +1,53 @@
+﻿@model PagedList<School.Models.scienceSet>
+@using Webdiyer.WebControls.Mvc
+@{
+    Layout = "~/Views/Shared/_Science.cshtml";
+}
+ <div class="con-con">
+            <div class="center">
+            	<ul class="center-title">
+            		<li><a href="@Url.Action("_Index1","Science")">科研机构</a></li>
+                 <li><a href="@Url.Action("_Index2","Science")">科研通知</a></li>
+                 <li class="active"><a href="@Url.Action("_Index3","Science")">科研成果</a></li>
+            	</ul>
+                @{
+                    int k=1;
+                    foreach(var item in Model)
+                    {
+                        <div class="center">
+
+                    <div class="center_body fl">
+                        <div>
+                            <p>@Html.ActionLink((k++).ToString() + "." + item.title, "Details", new { id = item.ID })</p>
+                            <span>@item.time</span>&nbsp&nbsp&nbsp&nbsp&nbsp消息出自：&nbsp&nbsp<span>@item.writer</span>
+                        </div>
+                    </div>
+                </div>
+                    }
+                   
+
+                        <p><div style="padding:0px  auto 0px auto">
+        <a> @Html.Pager(Model,
+            new PagerOptions
+            {
+                NextPageText = "下一页",
+                PrevPageText = "上一页",
+                FirstPageText = "首页",
+                LastPageText = "末页",
+                PageIndexParameterName = "News",
+                CssClass = "pages",
+                CurrentPagerItemWrapperFormatString = "<span class=\"cpb\">{0}</span>",
+                NumericPagerItemWrapperFormatString = "<span class=\"item\">{0}</span>",
+                NumericPagerItemCount=6
+            },
+                null,
+                new
+                {
+                    id = ViewBag.columnId,
+                    classId = ViewBag.classId
+                })
+                </a>
+         </div></p>
+                    }
+                    }
+        </div>

@@ -1,0 +1,37 @@
+﻿@model School.Models.txworkSet
+@using (Html.BeginForm())
+{
+           @Html.ValidationSummary(true)        
+           <div class="conhead">
+                        <p>团学工作</p>
+                    <div class="titleedit">       
+                        <span>题目 : </span>
+                        <input name="title" type="text" class ="text" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp类别 : </span>
+                        <select id="Select1" name="kind" class="select">
+                            <option>思想教育</option>
+                            <option>学风建设</option>
+                            <option>日常管理</option>
+                            <option>奖励工作</option>
+                            <option>团学活动</option>
+                            <option>就业工作</option>
+                            <option>健康教育</option>
+                            <option>创新创业</option>
+                            <option>岁月答疑</option>
+                        </select><br /><br />
+                        <span>作者 : </span>
+                        <input name="writer" type="text" class ="text" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp日期 : </span>
+                        <input name="time" class ="text" type="text" value="@DateTime.Now.ToLocalTime()" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp附件 ：</span>
+                        <input type="text" name="file" class="text" id="xFilePath" />
+                        <input type="button"  value="上 传" onclick="BrowseServer()" />
+                    </div>
+           </div>                                     
+           <div>
+                <script name ="Content" id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+           </div>
+           <div class="consub">
+           <input type="submit" value="提交" id="button" />
+           </div>
+}

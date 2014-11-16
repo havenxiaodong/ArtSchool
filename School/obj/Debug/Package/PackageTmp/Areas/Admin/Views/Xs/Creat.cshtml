@@ -1,0 +1,23 @@
+﻿@model School.Models.ActivitySet
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+           <div class="conhead">
+                        <p>学术活动</p>
+                    <div class="titleedit">       
+                        <span>题目 : </span>
+                        <input name="Title" type="text" class ="text" />
+                        <span>日期 : </span>
+                        <input name="Date" class ="text" type="text" value="@DateTime.Now.ToLocalTime()" />
+                        <span>附件 :</span>
+                        <input type="text" name="file" class="text" id="xFilePath" />
+                        <input type="button"  value="上 传" onclick="BrowseServer()" />
+                    </div>
+           </div>                                     
+           <div>
+                <script name ="content" id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+           </div>
+           <div class="consub">
+           <input type="submit" value="提交" id="button" />
+           </div>
+}

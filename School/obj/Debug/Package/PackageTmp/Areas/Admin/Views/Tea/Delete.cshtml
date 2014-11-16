@@ -1,0 +1,24 @@
+﻿@model School.Models.TeaTeamSet
+<fieldset>
+    <h3>照片</h3>
+        <div ><img src="@Model.photo" alt="照片" height="300px";/></div>
+    <h3>姓名</h3>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>
+
+    <h3>职称</h3>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.job)
+    </div>
+    <h3>系别</h3>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.kind)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="删除" /> |
+        @Html.ActionLink("返回列表", "Index")
+    </p>
+}

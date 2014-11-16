@@ -1,0 +1,32 @@
+﻿@model School.Models.zhuanyeSet
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+           <div class="conhead">
+                        <p>专业建设</p>
+                    <div class="titleedit">       
+                        <span>题目 : </span>
+                        <input name="title" type="text" class ="text" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp类别 : </span>
+                        <select id="Select1" name="kind" class="select">
+                            <option>教学团队</option>
+                            <option>专业介绍</option>
+                            <option>培养方案</option>
+                            <option>特色专业</option>
+                        </select><br /><br />
+                        <span>来源 : </span>
+                        <input name="writer" type="text" class ="text" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp日期 : </span>
+                        <input name="time" class ="text" type="text" value="@DateTime.Now.ToLocalTime()" />
+                        <span>附件</span>
+                        <input type="text" name="file" class="text" id="xFilePath" />
+                        <input type="button"  value="上 传" onclick="BrowseServer()" />
+                    </div>
+           </div>                                     
+           <div>
+                <script name ="content" id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+           </div>
+           <div class="consub">
+           <input type="submit" value="提交" id="button" />
+           </div>
+}

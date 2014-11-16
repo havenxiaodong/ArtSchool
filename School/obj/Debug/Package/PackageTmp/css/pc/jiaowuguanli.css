@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2014-08-25 16:16:34
+ * @version $Id$
+ */
+.title{
+    float: left;
+}
+.center_body{
+
+}
+.leftpx{
+    margin-left: 13%;
+}

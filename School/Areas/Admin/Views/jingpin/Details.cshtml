@@ -1,0 +1,48 @@
+﻿@model School.Models.jingpinSet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>jingpinSet</legend>
+    <div class="display-label">title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+    <div class="display-label">video</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.video)
+    </div>
+
+    <div class="display-label">img</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.img)
+    </div>
+
+    <div class="display-label">time</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.time)
+    </div>
+
+    <div class="display-label">writer</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.writer)
+    </div>
+
+    <div class="display-label">content</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.content)
+    </div>
+
+    <div class="display-label">pingjia</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pingjia)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

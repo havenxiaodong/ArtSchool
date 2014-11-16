@@ -1,0 +1,38 @@
+﻿@model School.Models.dqworkSet
+@using (Html.BeginForm())
+{
+           @Html.ValidationSummary(true)       
+           <div class="conhead">
+                        <p>党群工作</p>
+                    <div class="titleedit">                        
+                        <span>题目 : </span>
+                        <input name="title" type="text" class ="text" value="@Model.title" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp类别 : </span>
+                        <select id="Select1" name="kind" class ="select">
+                            <option>理论学习</option>
+                            <option>组织机构</option>
+                            <option>制度建设</option>
+                            <option>党群动态</option>
+                            <option>学院党校</option>
+                            <option>党支部风采</option>
+                            <option>党员风采</option>
+                            <option>党员工作站</option>
+                            <option>公会教代会</option>
+                            <option>妇委会</option>
+                            </select><br/><br/>
+                        <span>作者 : </span>
+                        <input name="writer" type="text" class ="text" value="@Model.writer" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp日期 : </span>
+                        <input name="time" class ="text" type="text" value="@DateTime.Now.ToLocalTime()" />
+                        <span>附件</span>
+                        <input type="text" name="file" class="text" id="xFilePath" />
+                        <input type="button"  value="上 传" onclick="BrowseServer()" />
+                    </div>
+           </div>                                   
+           <div>
+                <script name ="Content" id="editor" type="text/plain" style="width:1024px;height:500px;">@Html.Raw(@Model.content) </script>
+           </div>
+           <div class="consub">
+           <input type="submit" value="提交" id="button" />
+           </div>
+}

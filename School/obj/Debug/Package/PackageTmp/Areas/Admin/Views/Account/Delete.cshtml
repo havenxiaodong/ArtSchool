@@ -1,0 +1,33 @@
+﻿@model School.Models.AdminSet
+
+@{
+    ViewBag.Title = "删除管理员";
+}
+
+<h2>删除管理员</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>删除管理员</legend>
+
+    <div class="display-label">用户名</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">密码</div>
+    <div class="display-field">
+        **********
+    </div>
+
+    <div class="display-label">角色</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Role)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("返回", "Index")
+    </p>
+}

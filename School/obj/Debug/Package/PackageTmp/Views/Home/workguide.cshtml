@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+    <title>艺术与设计学院</title>
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/pc/index.css"/>
+        <style type="text/css">
+     .header{
+        height: 450px;
+    }
+    .line1{
+        margin-top:22px;
+        margin-bottom: 25px;
+    }
+    #divbig {
+    width: 980px;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+    margin-bottom:20px ;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+    table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;    
+}
+
+    .bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+    .bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+    .bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+    .bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #9e9e9e, #9e9e9e);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    color: #fff;
+}
+
+    .bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+    .bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+    .bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+    .bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+    .bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+    .bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+    </style>
+    <script src="../content/js/seajs/sea.js" data-main="modules/init"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="mainShow">
+
+            <div class="nav">
+                <ul class="firstNav">
+                    <li ><a href="@Url.Action("school_intro","Home")">学院概况</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("school_intro","Home")">学院简介</a></li>
+                            <li><a href="@Url.Action("school_history","Home")">历史沿革</a></li>
+                            <li><a href="@Url.Action("school_nowleader","Home")">现任领导</a></li>
+                            <li><a href="">系所机构</a></li>
+                            <li><a href="">学院方位图</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Action("_TeaList1","TeaTeam")">师资队伍</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_TeaList1","TeaTeam")">艺术设计</a></li>
+                            <li><a href="@Url.Action("_TeaList2", "TeaTeam")">工业设计</a></li>
+                            <li><a href="@Url.Action("_TeaList2", "TeaTeam")">音乐系</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Subject")">学科建设</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","Subject")">办学体系</a></li>
+                            <li><a href="@Url.Action("_Index2","Subject")">学科设置</a></li>
+                            <li><a href="@Url.Action("_Index3","Subject")">硕士点</a></li>
+                            <li><a href="@Url.Action("_Index4","Subject")">学术交流</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","zhuanye")">专业建设</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","zhuanye")">教学团队</a></li>
+                            <li><a href="@Url.Action("_Index2","zhuanye")">专业介绍</a></li>
+                            <li><a href="@Url.Action("_Index3","zhuanye")">培养方案</a></li>
+                            <li><a href="@Url.Action("_Index4","zhuanye")">特色专业</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Jwguanli")">教务管理</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","Jwguanli")">制度文件</a></li>
+                            <li><a href="@Url.Action("_Index2","Jwguanli")">教务通知</a></li>
+                            <li><a href="@Url.Action("_Index3","Jwguanli")">实践教学</a></li>
+                            <li><a href="@Url.Action("_Index4","Jwguanli")">工作流程</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Science")">科学研究</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","Science")">科研机构</a></li>
+                            <li><a href="@Url.Action("_Index2","Science")">科研通知</a></li>
+                            <li><a href="@Url.Action("_Index3","Science")">科研成果</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Dqwork")">党群工作</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1", "Dqwork")">理论学习</a></li>
+                            <li><a href="@Url.Action("_Index2","Dqwork")">组织机构</a></li>
+                            <li><a href="@Url.Action("_Index3", "Dqwork")">制度建设</a></li>
+                            <li><a href="@Url.Action("_Index4", "Dqwork")">党群动态</a></li>
+                            <li><a href="@Url.Action("_Index5", "Dqwork")">学院党校</a></li>
+                            <li><a href="@Url.Action("_Index6", "Dqwork")">党支部风采</a></li>
+                            <li><a href="@Url.Action("_Index7", "Dqwork")">党员风采</a></li>
+                            <li><a href="@Url.Action("_Index8", "Dqwork")">党员工作站</a></li>
+                            <li><a href="@Url.Action("_Index9", "Dqwork")">工会教代会</a></li>
+                            <li><a href="@Url.Action("_Index10", "Dqwork")">妇委会</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Txwork")">团学工作</a>
+                        <ul class="secondNav">
+                    <li><a href="@Url.Action("_Index1","Txwork")">思想教育</a></li>
+                    <li><a href="@Url.Action("_Index2", "Txwork")">学风建设</a></li>
+                    <li><a href="@Url.Action("_Index3", "Txwork")">日常管理</a></li>
+                    <li><a href="@Url.Action("_Index4", "Txwork")">奖励工作</a></li>
+                    <li><a href="@Url.Action("_Index5", "Txwork")">团学活动</a></li>
+                    <li><a href="@Url.Action("_Index6", "Txwork")">就业工作</a></li>
+                    <li><a href="@Url.Action("_Index7", "Txwork")">健康教育</a></li>
+                    <li><a href="@Url.Action("_Index8", "Txwork")">创新创业</a></li>
+                    <li><a href="@Url.Action("_Index9", "Txwork")">岁月答疑</a></li>
+                </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("Index","yyfc")">艺苑风采</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("Index","yyfc")">学院风采</a></li>
+                            <li><a href="@Url.Action("Index2","yyfc")">校园电子报</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="last"><a href="@Url.Action("Index","zhuanti")">专题</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("Index","zhuanti")">党的群众路线</a></li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+                <form action="" method="" class="fr search">
+                    <input type="text" name="" class="fl"/>
+                    <input type="image" src="../content/images/search.png" class="fl">
+                </form>
+
+            </div>
+            <div class="showAD fl ">
+                <img src="../content/images/wCollegeLg.png" class="fl"/>
+                <p class="fl p1">艺术与设计学院</p><br/>
+                <p class="p2">School Of Art&Design</p>
+            </div>
+            <p id="slogan">艺术美化认识&nbsp&nbsp设计点亮生活</p>
+            <div class="cumtLogo clear">
+                <img src="../content/images/cumtLogo.png" />
+            </div>
+            <div class="triangle">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <img src="../content/images/red_bg.jpg" id="bg"/>
+        </div>
+    </div>
+    <div class="fontIcon">
+           <div class="iconBox fl" style="margin-top:15px;">
+               <i class="email"></i>
+               <p style="margin-left: 2em">领导信箱</p>
+           </div>
+            <div class="iconBox fl">
+                <i class="guide"></i>
+                <p>办事指南</p>
+            </div>
+            <div class="iconBox fl">
+                <i class="subject"></i>
+                <p>精品课程</p>
+            </div>
+            <div class="iconBox fl">
+                <i class="teaching"></i>
+                <p>实践教学</p>
+            </div>
+            <div class="iconBox fl">
+                <i class="web"></i>
+                <p>网络课程</p>
+            </div>
+            <div class="iconBox fl last">
+                <i class="works"></i>
+                <p>作品展馆</p>
+            </div>
+    </div>
+    <div class="line1 clear"></div>
+    <div class="content">
+
+
+
+      <div id="divbig">
+      <table class="bordered">
+    <thead>
+    <tr>
+        <th>党委办公室、校长办公室</th>        
+        <th>地址</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>主任室</td>        
+        <td>南湖党政办公楼A427</td>
+    </tr>        
+    <tr>
+        <td>副主任室</td>        
+        <td>南湖党政办公楼A323、 A325 、A327</td>    
+    </tr>
+    <tr>
+        <td>综合科</td>        
+        <td>南湖党政办公楼A321</td>   
+    </tr>    
+    <tr>
+        <td>综合科（印章办公室）</td>        
+        <td>南湖党政办公楼A319</td>   
+    </tr>
+    <tr>
+        <td>院士工作办公室</td>        
+        <td>南湖党政办公楼A321</td>
+    </tr>
+    <tr>
+        <td>秘书科</td>        
+        <td>南湖党政办公楼A425，A414</td>
+    </tr>
+    <tr>
+        <td>法律事务与信访科</td>        
+        <td>南湖党政办公楼A329</td>
+    </tr>
+    <tr>
+        <td>机要保密科</td>        
+        <td>南湖党政办公楼A429</td>
+    </tr>
+    <tr>
+        <td>信息科</td>        
+        <td>南湖党政办公楼A312</td>
+    </tr>
+    <tr>
+        <td>文印室</td>        
+        <td>南湖党政办公楼A314</td>
+    </tr>
+</table>
+</div>
+
+
+
+
+        <div class="line clear"></div>
+        <div class="interest out">
+            <span class="in">关注&nbspA&D</span><a  class="in" href="">WEIBO微博</a><a href="" class="border">RENREN</a>
+        </div>
+        <div class="line clear"></div>
+        <div class="links ">
+           <ul class="links-nav">
+               <li class="first">链接&nbspLinks</li>
+               <li>校内站点</li>
+               <li>艺术院校</li>
+               <li>资源网站</li>
+               <li>设计网站</li>
+           </ul>
+
+            <ul class="fl fl178">
+                <li><a href="">矿大首页</a></li>
+                <li><a href="">教务处</a></li>
+                <li><a href="">图书馆</a></li>
+                <li><a href="">机电工程学院</a></li>
+                <li><a href="">力学与建筑工程学院</a></li>
+
+            </ul>
+            <ul class="fl fl70">
+                <li><a href="">清华美院</a></li>
+                <li><a href="">江南大学艺术学院</a></li>
+                <li><a href="">湖南大学艺术与设计学院</a></li>
+                <li><a href="">同济大学设计与创意学院</a></li>
+
+
+
+            </ul>
+            <ul class="fl fl43">
+                <li><a href="">素材中国</a></li>
+                <li><a href="">站酷</a></li>
+                <li><a href="">deviantart</a></li>
+
+
+            </ul>
+            <ul class="fl fl126">
+                <li><a href="">中华室内设计网</a></li>
+                <li><a href="">第一景观网</a></li>
+                <li><a href="">中国平面设计在线</a></li>
+                <li><a href="">BillWang</a></li>
+                <li><a href="">视觉中国</a></li>
+                <li><a href="">中国艺术设计联盟</a></li>
+
+
+            </ul>
+
+        </div>
+        <div class="line clear"></div>
+
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li class="first">联系Contact</li>
+            <li><span>电话</span>&nbsp&nbsp:&nbsp&nbsp0516-8359199</li>
+            <li><span>传真</span>&nbsp&nbsp:&nbsp&nbsp0516-8359199</li>
+            <li><span>地址</span>&nbsp&nbsp:&nbsp&nbsp江苏省徐州市大学路1号中国矿业大学南湖校区</li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

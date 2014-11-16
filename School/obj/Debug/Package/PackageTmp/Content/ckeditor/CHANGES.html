@@ -1,0 +1,9 @@
+﻿	<div>
+                <script type="text/javascript" src="ckeditor.js"></script>
+                <script type="text/javascript" src="ckfinder.js"></script>
+                <textarea id="Content" name="Content"></textarea>
+                <script type="text/javascript">
+                    var editor = CKEDITOR.replace('Content');          // 创建编辑器
+                    CKFinder.setupCKEditor(editor, '/Content/ckfinder/');   // 为编辑器绑定"上传控件"
+                </script>
+                </div>

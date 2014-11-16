@@ -1,0 +1,40 @@
+﻿@model School.Models.ywshowSet
+
+@{
+    ViewBag.Title = "艺苑风采";
+}
+
+<h2>艺苑风采</h2>
+
+<fieldset>
+    <legend>艺苑风采</legend>
+
+    <div class="display-label">标题</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">时间</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.time)
+    </div>
+
+    <div class="display-label">类别</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.kind)
+    </div>
+
+    <div class="display-label">来源</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.writer)
+    </div>
+
+    <div class="display-label">正文</div>
+    <div class="display-field">
+        @Html.Raw(@Model.content)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("返回列表", "Index")
+</p>

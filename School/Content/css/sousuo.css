@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2014-10-12 14:11:42
+ * @version $Id$
+ */
+.select{
+    width: 100px;
+}
+.text{
+    height: 12px;
+    line-height: 12px;
+    width: 150px;
+    border: 1px solid #ccc;
+}
+.submit{
+    width: 60px;
+    background: #99414F;
+    padding: 3px 1px;
+    color: #fff;
+}
+
+.conedit{
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
+    font-family: 黑体;
+}
+.conbody{
+    background: #fff;
+    border: 1px solid #ccc;
+}
+.span1{
+    width: 120px;
+}.span2{
+    width: 456px;
+}.span3{
+    width: 128px;
+}.span4{
+    width: 142px;
+}.span5{
+    width: 150px;
+}
+.span1,.span2,.span3,.span4,.span5{
+    display: block;
+    float: left;
+    text-align: center;
+    padding: 0px;
+    margin:0px;
+}
+.page{
+    text-align: right;
+    color:#777;
+
+}
+.page a{
+    text-decoration: none;
+    color:#777;
+}

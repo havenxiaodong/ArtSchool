@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2014-08-25 17:16:04
+ * @version $Id$
+ */
+.content .center{
+    width: 752px;
+    height: auto;
+}
+.conhead{
+    margin:auto ;
+    padding-top: 17px;
+    height: 64px;
+    width:832px;
+}
+.bantou{
+    float: left;
+}
+.btform{
+    margin-top: 35px;
+}
+.btsub{
+    background-color: #BB1B33;
+    border:1px #999 solid;
+    padding: 1px 5px;
+}
+.btsub:hover{
+    font-weight: bold;
+    border-color: #333;
+}
+.flor{
+    float: right;
+    font-size: 20px;
+    color: #BA1E36;
+    margin-top: -45px;
+    padding: 20px;
+}
+.btline{
+    width: 2px;
+    height: 20px;
+    background-color: #999;
+    margin-top: -20px;
+    padding: 0px;
+}
+.center{
+    padding: 40px 60px 20px 30px;
+}
+.cenbody li{
+    font-size: 18px;
+    margin: 16px 5px;
+
+}
+.cenbody li span{
+    float: right;
+}
+.cenbody li,.cenbody li a{
+    color: #999;
+}
+
+.cenbody li a:hover{
+    color: #EF9750;
+    text-decoration: none;
+}
+.cenfoot{
+    font-size: 18px;
+    margin-left: 4px;
+    color: #999;
+    padding-top: 20px;
+}
+.cenfoot .leftmar{
+    margin-left: 380px;
+}
+.cenfoot a{
+    color: #999;
+    padding: 0px 2px;
+}
+.cenfoot a:hover{
+    color: #EF9750;
+    text-decoration: none;
+}
+.bant .banth{
+    font-size: 28px;
+    color: #DB556E;
+    border-bottom: 2px solid #888;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+.bant p{
+    margin: 10px 0px 20px;
+    font-size: 10px;
+    color: #888;
+}
+.spspan{
+    background-color: #555;
+    padding: 0px 2px;
+    color: white;
+}
+.cencont img{
+    width: 380px;
+    float: left;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+.cencont p{
+    font-size: 16px;
+    text-indent: 2em;
+    color: #999;
+}
+.cenconfoot{
+    margin-top: 100px;
+    float: right;
+}
+.cenconfoot a{
+    color: #999;
+}
+.cenconfoot a:hover{
+    text-decoration: none;
+}

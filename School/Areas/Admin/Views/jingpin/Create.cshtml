@@ -1,0 +1,30 @@
+﻿@model School.Models.jingpinSet
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+            <div class="conhead">
+                        <p>精品课程</p>
+                    <div class="titleedit">       
+                        <span>题目 : </span>
+                        <input name="title" type="text" class ="text" />
+                        <span>作者 : </span>
+                        <input name="writer" type="text" class ="text" />
+                        <span>日期 : </span>
+                        <input name="time" class ="text" type="text" value="@DateTime.Now.ToLocalTime()" />
+                        <span>视频 ：</span>
+                        <input type="text" name="video" class="text" id="xFilePath1" />
+                        <input type="button"  value="上 传" onclick="BrowseServer()" /><br/><br/>
+                        <span>评价 : </span>
+                        <input name="pingjia" type="text" class ="text" />
+                        <span>图片 :</span>
+                        <input type="text" name="img" class="text" id="xFilePath2" />
+                        <input type="button"  value="上 传" onclick="BrowseServer()" />
+                    </div>
+           </div>                                     
+           <div>
+                <script name ="content" id="editor" type="text/plain" style="width:1024px;height:500px;">在这里填写视频简介</script>
+           </div>
+           <div class="consub">
+           <input type="submit" value="提交" id="button" />
+           </div>
+}

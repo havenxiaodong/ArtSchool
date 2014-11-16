@@ -1,0 +1,16 @@
+﻿@model IEnumerable<School.Models.ActivitySet>
+
+<div class="newsBox common-news fl">
+            <span class="fl"><a href="@Url.Action("Index","xueshu")">学术活动</a></span>
+            <a href="@Url.Action("Index","xueshu")" class="fr">more</a>
+            <ul>
+             @{
+                int k = 1;
+                foreach(var item in Model)
+                {
+                   <li> @Html.ActionLink((k++).ToString() + "." + item.Title, "ActivityDetails", new { id = item.ID })&nbsp<em>...</em></li>
+                }
+                }
+                
+            </ul>
+        </div>

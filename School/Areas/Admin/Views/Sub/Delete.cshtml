@@ -1,0 +1,24 @@
+﻿@model School.Models.SubjectSet
+<fieldset>
+    <h3>标题</h3>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <h3>时间</h3>
+    <div class="display-field">
+    @Html.DisplayFor(model => model.time)
+        
+    </div>
+
+    <h3>类别</h3>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.kind)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="删除" /> |
+        @Html.ActionLink("返回列表", "Index")
+    </p>
+}

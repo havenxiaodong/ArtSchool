@@ -1,0 +1,114 @@
+﻿@model PagedList<School.Models.NewsSet>
+@using Webdiyer.WebControls.Mvc
+@{
+    ViewBag.Title = "新闻管理";
+}
+
+<h2>新闻管理</h2>
+
+<p>
+    @Html.ActionLink("添加新闻", "Create")
+</p>
+<p>
+    @Html.ActionLink("未审核新闻列表", "Index_Unchecked")
+</p>
+<table>
+    <tr>
+        <th>
+            标题
+        </th>
+        <th>
+            栏目
+        </th>
+        <th>
+            类别
+        </th>
+        <th>
+            时间
+        </th>
+        <th>
+            作者
+        </th>
+        <th>
+            是否通过审核
+        </th>
+        <th>
+            正文
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.Title
+        </td>
+        <td>
+            @item.classid
+        </td>
+        <td>
+            @item.Kind
+        </td>
+        <td>
+            @item.file
+        </td>
+        <td>
+            @item.Date
+        </td>
+        <td>
+            @item.Writer
+        </td>
+
+        <td>
+            
+            @{
+                
+                <select id="Select1">
+                @if(item.Checked==1)
+                {
+                    <option>已通过审核</option>
+                    }
+                @if (item.Checked == null)
+                {
+                    <option>未审核</option>
+                }
+                @if (item.Checked == 0)
+                { 
+                <option>未通过审核</option>
+                }
+            </select>
+              }
+        </td>
+        <td>
+   
+        </td>
+        
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("详情", "Details", new { id=item.ID }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+<center><a> @Html.Pager(Model,
+            new PagerOptions
+            {
+                NextPageText = "下一页",
+                PrevPageText = "上一页",
+                FirstPageText = "首页",
+                LastPageText = "末页",
+                PageIndexParameterName = "news",
+                CssClass = "pages",
+                CurrentPagerItemWrapperFormatString = "<span class=\"cpb\">{0}</span>",
+                NumericPagerItemWrapperFormatString = "<span class=\"item\">{0}</span>",
+                NumericPagerItemCount=6
+            },
+                null,
+                new
+                {
+                    id = ViewBag.columnId,
+                    classId = ViewBag.classId
+                })
+                </a></center>

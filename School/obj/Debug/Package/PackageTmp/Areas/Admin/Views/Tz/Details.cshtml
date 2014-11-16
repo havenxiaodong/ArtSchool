@@ -1,0 +1,36 @@
+﻿@model School.Models.NoticesSet
+
+@{
+    ViewBag.Title = "通知公告";
+}
+
+<h2>通知公告</h2>
+
+<fieldset>
+    <legend>通知公告</legend>
+
+    <div class="display-label">标题</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    
+
+    <div class="display-label">时间</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+
+    <div class="display-label">作者</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Writer)
+    </div>
+    <div class="display-label">正文</div>
+    <div class="display-field">
+        @Html.Raw(@Model.Content)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("返回列表", "Index")
+</p>

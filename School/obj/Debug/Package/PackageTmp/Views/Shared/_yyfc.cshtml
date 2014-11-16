@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "_yyfc";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>艺术与设计学院</title>
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/pc/common.css" />
+    <link rel="stylesheet" href="../css/pc/xk_kexue.css" />
+    <link rel="stylesheet" href="../css/pc/kexue.css" />
+    <script src="../content/js/seajs/sea.js" data-main="modules/school_intro"></script>
+</head>
+<body>
+    <div class="nav">
+        <a href="@Url.Action("Index","Home")"><img src="../content/images/rCollegeLg.jpg"class="fl" id="logo"/></a>
+        <ul class="firstNav">
+                    <li ><a href="@Url.Action("school_intro","Home")">学院概况</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("school_intro","Home")">学院简介</a></li>
+                            <li><a href="@Url.Action("school_history","Home")">历史沿革</a></li>
+                            <li><a href="@Url.Action("school_nowleader","Home")">现任领导</a></li>
+                            <li><a href="">系所机构</a></li>
+                            <li><a href="">学院方位图</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Action("_TeaList1","TeaTeam")">师资队伍</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_TeaList1","TeaTeam")">艺术设计</a></li>
+                            <li><a href="@Url.Action("_TeaList2", "TeaTeam")">工业设计</a></li>
+                            <li><a href="@Url.Action("_TeaList2", "TeaTeam")">音乐系</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Subject")">学科建设</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","Subject")">办学体系</a></li>
+                            <li><a href="@Url.Action("_Index2","Subject")">学科设置</a></li>
+                            <li><a href="@Url.Action("_Index3","Subject")">硕士点</a></li>
+                            <li><a href="@Url.Action("_Index4","Subject")">学术交流</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","zhuanye")">专业建设</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","zhuanye")">教学团队</a></li>
+                            <li><a href="@Url.Action("_Index2","zhuanye")">专业介绍</a></li>
+                            <li><a href="@Url.Action("_Index3","zhuanye")">培养方案</a></li>
+                            <li><a href="@Url.Action("_Index4","zhuanye")">特色专业</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Jwguanli")">教务管理</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","Jwguanli")">制度文件</a></li>
+                            <li><a href="@Url.Action("_Index2","Jwguanli")">教务通知</a></li>
+                            <li><a href="@Url.Action("_Index3","Jwguanli")">实践教学</a></li>
+                            <li><a href="@Url.Action("_Index4","Jwguanli")">工作流程</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Science")">科学研究</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1","Science")">科研机构</a></li>
+                            <li><a href="@Url.Action("_Index2","Science")">科研通知</a></li>
+                            <li><a href="@Url.Action("_Index3","Science")">科研成果</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Dqwork")">党群工作</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("_Index1", "Dqwork")">理论学习</a></li>
+                            <li><a href="@Url.Action("_Index2","Dqwork")">组织机构</a></li>
+                            <li><a href="@Url.Action("_Index3", "Dqwork")">制度建设</a></li>
+                            <li><a href="@Url.Action("_Index4", "Dqwork")">党群动态</a></li>
+                            <li><a href="@Url.Action("_Index5", "Dqwork")">学院党校</a></li>
+                            <li><a href="@Url.Action("_Index6", "Dqwork")">党支部风采</a></li>
+                            <li><a href="@Url.Action("_Index7", "Dqwork")">党员风采</a></li>
+                            <li><a href="@Url.Action("_Index8", "Dqwork")">党员工作站</a></li>
+                            <li><a href="@Url.Action("_Index9", "Dqwork")">工会教代会</a></li>
+                            <li><a href="@Url.Action("_Index10", "Dqwork")">妇委会</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("_Index1","Txwork")">团学工作</a>
+                        <ul class="secondNav">
+                    <li><a href="@Url.Action("_Index1","Txwork")">思想教育</a></li>
+                    <li><a href="@Url.Action("_Index2", "Txwork")">学风建设</a></li>
+                    <li><a href="@Url.Action("_Index3", "Txwork")">日常管理</a></li>
+                    <li><a href="@Url.Action("_Index4", "Txwork")">奖励工作</a></li>
+                    <li><a href="@Url.Action("_Index5", "Txwork")">团学活动</a></li>
+                    <li><a href="@Url.Action("_Index6", "Txwork")">就业工作</a></li>
+                    <li><a href="@Url.Action("_Index7", "Txwork")">健康教育</a></li>
+                    <li><a href="@Url.Action("_Index8", "Txwork")">创新创业</a></li>
+                    <li><a href="@Url.Action("_Index9", "Txwork")">岁月答疑</a></li>
+                </ul>
+
+                    </li>
+                    <li><a href="@Url.Action("Index","yyfc")">艺苑风采</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("Index","yyfc")">学院风采</a></li>
+                            <li><a href="@Url.Action("Index2","yyfc")">校园电子报</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="last"><a href="@Url.Action("Index","zhuanti")">专题</a>
+                        <ul class="secondNav">
+                            <li><a href="@Url.Action("Index","zhuanti")">党的群众路线</a></li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+        <form action="" method="" class="fr search">
+            <input type="text" name="" class="fl"/>
+            <input type="image" src="../content/images/search.png " class="fl">
+        </form>
+    </div>
+    <div class="header">
+        <div class="bg"></div>
+    </div>
+
+    <div class="content ">
+        <div class="con-con">
+        @RenderBody()
+        </div>
+        <div class="footer">
+            <center>版权所有：中国矿业大学艺术与设计学院 <a href="@Url.Action("LogOn", "Account", new { area = "Admin" })">管理员登录</a> </center>
+            <center>地址：江苏省徐州市大学路1号中国矿业大学南湖校区 | 电话：0516-8359199 | 传真：0516-83591999</center>
+        </div>
+    </div>
+</body>
+</html>

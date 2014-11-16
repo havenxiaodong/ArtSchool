@@ -1,0 +1,45 @@
+﻿@model IEnumerable<School.Models.AdminSet>
+
+@{
+    ViewBag.Title = "用户列表";
+}
+
+<h2>用户列表</h2>
+
+<p>
+    @Html.ActionLink("添加用户", "Register")
+</p>
+<table>
+    <tr>
+        <th>
+            姓名
+        </th>
+        <th>
+            密码
+        </th>
+        <th>
+            角色
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            **********
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role)
+        </td>
+        <td>
+            
+            @Html.ActionLink("详情", "Details", new { id=item.ID }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

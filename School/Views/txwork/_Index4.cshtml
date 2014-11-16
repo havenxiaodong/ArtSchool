@@ -1,0 +1,57 @@
+﻿@model PagedList<School.Models.txworkSet>
+@using Webdiyer.WebControls.Mvc
+@{
+    Layout = "~/Views/Shared/_ViewPage1.cshtml";
+}
+<div class="content ">
+        <p class="title">团学工作</p>
+        <div class="center">
+                <ul class="center_nav fl">
+                    <li><a href="@Url.Action("_Index1","Txwork")">思想教育</a></li>
+                    <li><a href="@Url.Action("_Index2", "Txwork")">学风建设</a></li>
+                    <li><a href="@Url.Action("_Index3", "Txwork")">日常管理</a></li>
+                    <li class="first"><a href="@Url.Action("_Index4", "Txwork")">奖励工作</a></li>
+                    <li><a href="@Url.Action("_Index5", "Txwork")">团学活动</a></li>
+                    <li><a href="@Url.Action("_Index6", "Txwork")">就业工作</a></li>
+                    <li><a href="@Url.Action("_Index7", "Txwork")">健康教育</a></li>
+                    <li><a href="@Url.Action("_Index8", "Txwork")">创新创业</a></li>
+                    <li><a href="@Url.Action("_Index9", "Txwork")">岁月答疑</a></li>
+                </ul>
+                @{
+                    int k=1;
+                    foreach (var item in Model)
+                    {
+                <div class="center_body fl">
+                    <div>
+                        <p>@Html.ActionLink((k++).ToString() + "." + item.title, "Details", new { id = item.ID })</p>
+                        <span>@item.time</span>&nbsp&nbsp&nbsp&nbsp&nbsp消息出自：&nbsp&nbsp<span>@item.writer</span>
+                    </div>
+                </div>
+                    }
+                    }
+        <p>
+        <div style="padding:0px  auto 0px auto">
+        <a> @Html.Pager(Model,
+            new PagerOptions
+            {
+                NextPageText = "下一页",
+                PrevPageText = "上一页",
+                FirstPageText = "首页",
+                LastPageText = "末页",
+                PageIndexParameterName = "News",
+                CssClass = "pages",
+                CurrentPagerItemWrapperFormatString = "<span class=\"cpb\">{0}</span>",
+                NumericPagerItemWrapperFormatString = "<span class=\"item\">{0}</span>",
+                NumericPagerItemCount=6
+            },
+                null,
+                new
+                {
+                    id = ViewBag.columnId,
+                    classId = ViewBag.classId
+                })
+                </a>
+         </div>
+         </p>
+        </div>
+</div>

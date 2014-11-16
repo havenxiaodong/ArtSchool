@@ -1,0 +1,29 @@
+﻿@model School.Models.TeaTeamSet
+@using (Html.BeginForm())
+{
+           @Html.ValidationSummary(true)
+           <div class="conhead">
+                        <p>师资队伍</p>
+                    <div class="titleedit">       
+                        <span>姓名 : </span>
+                        <input name="title" type="text" class ="text" />
+                        <span>职称 : </span>
+                        <input name="job" type="text" class ="text" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp系别 : </span>
+                        <select name="kind" class="select">
+                            <option>艺术设计</option>
+                            <option>工业设计</option>
+                            <option>音乐系</option>
+                        </select>
+                        <span>照片 :</span>
+                        <input type="text" name="photo" class="text" id="xFilePath"  />
+                        <input type="button"  value="上 传" onclick="BrowseServer()" />
+                    </div>
+           </div>                                     
+           <div>
+                <script name ="introduce" id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+           </div>
+           <div class="consub">
+                <input type="submit" value="提交" id="button" />
+           </div>
+}

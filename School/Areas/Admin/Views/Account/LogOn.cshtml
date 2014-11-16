@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>登录</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../content/css/loading.css">
+</head>
+<body>
+        <div id="box">
+        @using (Html.BeginForm("LogOn", "Account"))
+        {
+            
+            <img src="../../content/images/登录.png" />
+            <form> 
+                    <input type="text" name="UserName">
+                    @Html.ValidationMessage("UserName")
+                    <img src="../../content/images/密码.png" />
+                    <input type="password" name="PassWord">
+                    @Html.ValidationMessage("PassWord")
+                    <center><input name="Role" type="radio" value="teacher" checked="checked" /><label>老师</label>
+                    <input name="Role" type="radio" value="student" /><label>学生</label></center>
+                    <p><a href="#0">重设</a>
+                    <center><input type="submit" value="登录" /></center>
+                    </p>
+                    <p class="bluebg"></p>
+            </form>
+        }
+        </div>
+</body>
+</html>

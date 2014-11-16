@@ -1,0 +1,108 @@
+﻿@model PagedList<School.Models.NewsSet>
+@using Webdiyer.WebControls.Mvc
+                <div class="conhead">
+                        <p>新闻审核</p>
+                        <div class="titleedit">
+                                        <script language=javascript>
+
+                                            function g(formname) {
+
+                                                var url = "http://www.baidu.com/baidu";
+
+                                                formname.ct.value = "2097152";
+
+                                                formname.action = url;
+
+                                                return true;
+
+                                            }
+
+                                        </script>
+                                        <form name="f1" onsubmit="return g(this)" target="_blank">
+
+                                        <table style="font-size:9pt;">
+
+                                        <td>
+
+                                        <span>文章类别 : </span>
+
+                                        <select class="select">
+
+                                            <option value="首页">学院新闻</option>
+
+                                        </select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                                        <input name=word  class="text">
+
+                                        <input type="submit" class="submit" value="搜索"><br>
+
+                                        <input name=tn type=hidden value="bds">
+
+                                        <input name=cl type=hidden value="3">
+
+                                        <input name=ct type=hidden>
+
+                                        <input name=si type=hidden value="art.cumt.edu.cn">
+
+                                        </td>
+
+                                        </table>
+
+                                        </form>
+
+                        </div>
+                </div>
+                
+                <div class="conedit">
+                     <p>
+                            <span class="span1">ID</span>
+                            <span class="span2">文章名称</span>
+                            <span class="span3">文章类别</span>
+                            <span class="span4">发布时间</span>
+                            <span class="span6">审核/删除</span>
+                    </p>
+                </div>
+                
+            <div class="conbody">
+                @{
+                    int k=1;
+                    foreach (var item in Model)
+                    {
+                        <p>
+                            <span class="span1">@(k++)</span>
+                            <span class="span2">@item.Title</span>
+                            <span class="span3">@item.Kind</span>
+                            <span class="span4">@DataBinder.Eval(item.Date, "date", "{0:MM-dd}")</span>
+                            <span class="span6"><a href="#0>">@Html.ActionLink("审核", "Check", new { id = item.ID })</a> |
+                            <a href="#0">@Html.ActionLink("删除", "Delete", new { id = item.ID })</a></span>
+                        </p><br />
+                    }
+                 }
+            </div>
+                    
+                
+                <p class="page">
+                <center><a> @Html.Pager(Model,
+            new PagerOptions
+            {
+                NextPageText = "下一页",
+                PrevPageText = "上一页",
+                FirstPageText = "首页",
+                LastPageText = "末页",
+                PageIndexParameterName = "news",
+                CssClass = "pages",
+                CurrentPagerItemWrapperFormatString = "<span class=\"cpb\">{0}</span>",
+                NumericPagerItemWrapperFormatString = "<span class=\"item\">{0}</span>",
+                NumericPagerItemCount=6
+            },
+                null,
+                new
+                {
+                    id = ViewBag.columnId,
+                    classId = ViewBag.classId
+                })
+                </a></center>
+                </p>
+                <div class="consub">    
+                </div>
+

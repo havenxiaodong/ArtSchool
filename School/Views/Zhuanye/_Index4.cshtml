@@ -1,0 +1,52 @@
+﻿@model PagedList<School.Models.zhuanyeSet>
+@using Webdiyer.WebControls.Mvc
+@{
+    Layout = "~/Views/Shared/_yyfc.cshtml";
+}
+
+            <div class="center">
+            	<ul class="center-title">
+                    <li><a href="@Url.Action("_Index1","Zhuanye")">教师团队</a></li>
+                    <li><a href="@Url.Action("_Index2","Zhuanye")">专业介绍</a></li>
+                    <li><a href="@Url.Action("_Index3","Zhuanye")">培养方案</a></li>
+            		<li><a href="@Url.Action("_Index4","Zhuanye")">特色专业</a></li>
+            	</ul>
+                <div class="center">
+
+                    <div class="center_body fl">
+                    @{
+                        int k=1;
+                        foreach(var item in Model)
+                        {
+                            
+                            <div>
+                                    <p><a href="">@Html.ActionLink((k++).ToString() + "." + item.title, "Detials", new { id = item.ID })</a></p>
+                                    <span>@item.time</span>&nbsp&nbsp&nbsp&nbsp&nbsp消息出自：&nbsp&nbsp<span>@item.writer</span>
+                            </div>   
+                        }
+                        }
+
+                  <center><p> @Html.Pager(Model,
+                     new PagerOptions
+                     {
+                         NextPageText = "下一页",
+                         PrevPageText = "上一页",
+                         FirstPageText = "首页",
+                         LastPageText = "末页",
+                         PageIndexParameterName = "jwIndex",
+                         CssClass = "pages",
+                         CurrentPagerItemWrapperFormatString = "<span class=\"cpb\">{0}</span>",
+                         NumericPagerItemWrapperFormatString = "<span class=\"item\">{0}</span>",
+                         NumericPagerItemCount = 6
+                     },
+                    null,
+                    new
+                    {
+                    id = ViewBag.columnId,
+                    classId = ViewBag.classId
+                    }) </p></center>
+
+                    </div>
+                </div>
+            </div>
+        

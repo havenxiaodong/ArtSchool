@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="school2014Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="school2014ModelStoreContainer">
+          <EntitySet Name="Activity" EntityType="school2014Model.Store.Activity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Admin" EntityType="school2014Model.Store.Admin" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="dqwork" EntityType="school2014Model.Store.dqwork" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ImgBbox" EntityType="school2014Model.Store.ImgBbox" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="jingpin" EntityType="school2014Model.Store.jingpin" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="jwmanger" EntityType="school2014Model.Store.jwmanger" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="News" EntityType="school2014Model.Store.News" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Notices" EntityType="school2014Model.Store.Notices" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="science" EntityType="school2014Model.Store.science" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Subject" EntityType="school2014Model.Store.Subject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="school2014Model.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TeaTeam" EntityType="school2014Model.Store.TeaTeam" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tszh" EntityType="school2014Model.Store.Tszh" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="txwork" EntityType="school2014Model.Store.txwork" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="wangluo" EntityType="school2014Model.Store.wangluo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ywshow" EntityType="school2014Model.Store.ywshow" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="zhuanye" EntityType="school2014Model.Store.zhuanye" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ztmanger" EntityType="school2014Model.Store.ztmanger" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Activity">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PassWord" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Role" Type="nvarchar" Nullable="false" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="dqwork">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="time" Type="datetime" Nullable="false" />
+          <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="file" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="ImgBbox">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Picture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="link" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="jingpin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="video" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="img" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="time" Type="datetime" Nullable="false" />
+          <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="content" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="pingjia" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="jwmanger">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="time" Type="datetime" Nullable="false" />
+          <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="file" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Kind" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Writer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Checked" Type="nvarchar" MaxLength="50" />
+          <Property Name="Content" Type="varchar(max)" />
+          <Property Name="hit" Type="bigint" Nullable="false" />
+          <Property Name="file" Type="nvarchar" MaxLength="350" />
+          <Property Name="picture" Type="text" />
+        </EntityType>
+        <EntityType Name="Notices">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Writer" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="file" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="science">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="time" Type="datetime" Nullable="false" />
+          <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="file" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="time" Type="datetime" Nullable="false" />
+          <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="file" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TeaTeam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="photo" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="job" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="introduce" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="kind" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tszh">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+          <Property Name="file" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="txwork">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="time" Type="datetime" Nullable="false" />
+          <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="writer" Type="varchar(max)" Nullable="false" />
+          <Property Name="content" Type="varchar(max)" Nullable="false" />
+          <Property Name="file" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="wangluo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="time" Type="datetime" Nullable="false" />
+          <Property Name="write" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="img" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="pingjia" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="video" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="content" Type="nvarchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="ywshow">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="varchar(max)" Nullable="false" />
+          <Property Name="time" Type="datetime" Nullable="false" />
+          <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="writer" Type="varchar(max)" Nullable="false" />
+          <Property Name="content" Type="varchar(max)" Nullable="false" />
+          <Property Name="file" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="zhuanye">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="time" Type="datetime" Nullable="false" />
+          <Property Name="kind" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="file" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="ztmanger">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="time" Type="datetime" Nullable="false" />
+          <Property Name="writer" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="file" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="school2014Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="school2014Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="school2014Model.sysdiagrams" />
+          <EntitySet Name="Activity" EntityType="school2014Model.ActivitySet" />
+          <EntitySet Name="Notices" EntityType="school2014Model.NoticesSet" />
+          <EntitySet Name="Tszh" EntityType="school2014Model.TszhSet" />
+          <EntitySet Name="Admin" EntityType="school2014Model.AdminSet" />
+          <EntitySet Name="Subject" EntityType="school2014Model.SubjectSet" />
+          <EntitySet Name="dqwork" EntityType="school2014Model.dqworkSet" />
+          <EntitySet Name="jwmanger" EntityType="school2014Model.jwmangerSet" />
+          <EntitySet Name="science" EntityType="school2014Model.scienceSet" />
+          <EntitySet Name="ztmanger" EntityType="school2014Model.ztmangerSet" />
+          <EntitySet Name="jingpin" EntityType="school2014Model.jingpinSet" />
+          <EntitySet Name="wangluo" EntityType="school2014Model.wangluoSet" />
+          <EntitySet Name="zhuanye" EntityType="school2014Model.zhuanyeSet" />
+          <EntitySet Name="TeaTeam" EntityType="school2014Model.TeaTeamSet" />
+          <EntitySet Name="ywshow" EntityType="school2014Model.ywshowSet" />
+          <EntitySet Name="txwork" EntityType="school2014Model.txworkSet" />
+          <EntitySet Name="News" EntityType="school2014Model.NewsSet" />
+          <EntitySet Name="ImgBbox" EntityType="school2014Model.ImgBboxSet" />
+        </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ActivitySet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Date" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="NoticesSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Date" Nullable="false" Precision="0" />
+          <Property Type="String" Name="Writer" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="file" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TszhSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Time" Nullable="false" Precision="0" />
+          <Property Type="String" Name="file" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AdminSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PassWord" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Role" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SubjectSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="time" Nullable="false" />
+          <Property Type="String" Name="kind" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="file" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="dqworkSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="time" Nullable="false" />
+          <Property Type="String" Name="kind" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="writer" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="file" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="jwmangerSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="time" Nullable="false" />
+          <Property Type="String" Name="kind" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="writer" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="file" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="scienceSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="time" Nullable="false" />
+          <Property Type="String" Name="kind" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="writer" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="file" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ztmangerSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="time" Nullable="false" />
+          <Property Type="String" Name="writer" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="file" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="jingpinSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="video" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="img" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="time" Nullable="false" />
+          <Property Type="String" Name="writer" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="content" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pingjia" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="wangluoSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="time" Nullable="false" />
+          <Property Type="String" Name="write" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="img" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pingjia" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="video" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="content" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="zhuanyeSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="time" Nullable="false" />
+          <Property Type="String" Name="kind" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="writer" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="file" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TeaTeamSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="photo" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="job" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="introduce" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="kind" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ywshowSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="time" Nullable="false" />
+          <Property Type="String" Name="kind" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="writer" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="file" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="txworkSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="title" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="time" Nullable="false" />
+          <Property Type="String" Name="kind" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="writer" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="content" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="file" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="NewsSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Title" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Kind" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Date" />
+          <Property Type="String" Name="Writer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Checked" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Content" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="hit" Nullable="false" />
+          <Property Type="String" Name="file" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="picture" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ImgBboxSet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Title" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Picture" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Time" />
+          <Property Type="String" Name="link" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="school2014ModelStoreContainer" CdmEntityContainer="school2014Entities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.sysdiagrams)">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activity">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.ActivitySet)">
+        <MappingFragment StoreEntitySet="Activity">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notices">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.NoticesSet)">
+        <MappingFragment StoreEntitySet="Notices">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Writer" ColumnName="Writer" />
+          <ScalarProperty Name="file" ColumnName="file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tszh">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.TszhSet)">
+        <MappingFragment StoreEntitySet="Tszh">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="file" ColumnName="file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.AdminSet)">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subject">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.SubjectSet)">
+        <MappingFragment StoreEntitySet="Subject">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="kind" ColumnName="kind" />
+          <ScalarProperty Name="file" ColumnName="file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dqwork">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.dqworkSet)">
+        <MappingFragment StoreEntitySet="dqwork">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="kind" ColumnName="kind" />
+          <ScalarProperty Name="writer" ColumnName="writer" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="file" ColumnName="file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jwmanger">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.jwmangerSet)">
+        <MappingFragment StoreEntitySet="jwmanger">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="kind" ColumnName="kind" />
+          <ScalarProperty Name="writer" ColumnName="writer" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="file" ColumnName="file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="science">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.scienceSet)">
+        <MappingFragment StoreEntitySet="science">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="kind" ColumnName="kind" />
+          <ScalarProperty Name="writer" ColumnName="writer" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="file" ColumnName="file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ztmanger">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.ztmangerSet)">
+        <MappingFragment StoreEntitySet="ztmanger">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="writer" ColumnName="writer" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="file" ColumnName="file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jingpin">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.jingpinSet)">
+        <MappingFragment StoreEntitySet="jingpin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="video" ColumnName="video" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="writer" ColumnName="writer" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="pingjia" ColumnName="pingjia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wangluo">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.wangluoSet)">
+        <MappingFragment StoreEntitySet="wangluo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="write" ColumnName="write" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="pingjia" ColumnName="pingjia" />
+          <ScalarProperty Name="video" ColumnName="video" />
+          <ScalarProperty Name="content" ColumnName="content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zhuanye">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.zhuanyeSet)">
+        <MappingFragment StoreEntitySet="zhuanye">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="kind" ColumnName="kind" />
+          <ScalarProperty Name="writer" ColumnName="writer" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="file" ColumnName="file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeaTeam">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.TeaTeamSet)">
+        <MappingFragment StoreEntitySet="TeaTeam">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="introduce" ColumnName="introduce" />
+          <ScalarProperty Name="kind" ColumnName="kind" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ywshow">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.ywshowSet)">
+        <MappingFragment StoreEntitySet="ywshow">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="kind" ColumnName="kind" />
+          <ScalarProperty Name="writer" ColumnName="writer" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="file" ColumnName="file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="txwork">
+      <EntityTypeMapping TypeName="IsTypeOf(school2014Model.txworkSet)">
+        <MappingFragment StoreEntitySet="txwork">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="kind" ColumnName="kind" />
+          <ScalarProperty Name="writer" ColumnName="writer" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="file" ColumnName="file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="school2014Model.NewsSet">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="picture" ColumnName="picture" />
+                <ScalarProperty Name="file" ColumnName="file" />
+                <ScalarProperty Name="hit" ColumnName="hit" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Checked" ColumnName="Checked" />
+                <ScalarProperty Name="Writer" ColumnName="Writer" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Kind" ColumnName="Kind" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImgBbox">
+            <EntityTypeMapping TypeName="school2014Model.ImgBboxSet">
+              <MappingFragment StoreEntitySet="ImgBbox">
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="School">
+        <EntityTypeShape EntityType="school2014Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9802864583333331" IsExpanded="true" />
+        <EntityTypeShape EntityType="school2014Model.ActivitySet" Width="1.5" PointX="2.5" PointY="0.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="school2014Model.NoticesSet" Width="1.5" PointX="0.75" PointY="3.75" Height="1.9802864583333317" />
+        <EntityTypeShape EntityType="school2014Model.TszhSet" Width="1.5" PointX="2.75" PointY="3.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="school2014Model.AdminSet" Width="1.5" PointX="4.75" PointY="3.75" Height="1.7879850260416657" />
+        <EntityTypeShape EntityType="school2014Model.SubjectSet" Width="1.5" PointX="0.75" PointY="6.75" Height="1.9802864583333353" />
+        <EntityTypeShape EntityType="school2014Model.dqworkSet" Width="1.5" PointX="2.75" PointY="6.75" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="school2014Model.jwmangerSet" Width="1.5" PointX="6.75" PointY="4.75" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="school2014Model.scienceSet" Width="1.5" PointX="4.75" PointY="7.75" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="school2014Model.ztmangerSet" Width="1.5" PointX="8.75" PointY="6.75" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="school2014Model.jingpinSet" Width="1.5" PointX="3.375" PointY="10.75" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="school2014Model.wangluoSet" Width="1.5" PointX="5.375" PointY="10.75" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="school2014Model.zhuanyeSet" Width="1.5" PointX="5.375" PointY="0.75" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="school2014Model.TeaTeamSet" Width="1.5" PointX="11.375" PointY="0.75" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="school2014Model.ywshowSet" Width="1.5" PointX="9.375" PointY="9.75" Height="2.3520719401041674" />
+        <EntityTypeShape EntityType="school2014Model.txworkSet" Width="1.5" PointX="7.375" PointY="0.75" Height="2.3520719401041674" />
+        <EntityTypeShape EntityType="school2014Model.NewsSet" Width="1.5" PointX="11.375" PointY="3.75" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="school2014Model.ImgBboxSet" Width="1.5" PointX="0.75" PointY="10.75" Height="1.9802864583333282" />
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

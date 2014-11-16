@@ -1,0 +1,38 @@
+﻿@model School.Models.NewsSet
+
+@using (Html.BeginForm())
+{
+           @Html.ValidationSummary(true)           
+           <div class="conhead">
+                        <p>文章审核</p>
+                    <div class="titleedit">
+                                
+                        <span>题目 : </span>
+                        <input name="Title" type="text" class ="text" value="@Model.Title" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp类别 : </span>
+                        <select id="Select2" name="kind" class="select">
+                                        <option>艺术学院</option>
+                                        <option>新闻中心</option>
+                        </select>
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp状态 : </span>
+                        <select id="Select8" name="Checked" class="select">
+                                        <option>未通过审核</option>
+                                        <option>已通过审核</option>
+                        </select><br/><br/>
+                        <span>作者 : </span>
+                        <input name="Writer" type="text" class ="text" value="@Model.Writer" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp日期 : </span>
+                        <input name="Date" class ="text" type="text" value="@Model.Date" />
+                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp附件</span>
+                        <input type="text" name="file" class="text" id="xFilePath" value="@Model.file" />
+                        <input type="button"  value="上 传" onclick="BrowseServer()" />
+                        
+                    </div>
+           </div>                                      
+           <div>
+                <script name ="content" id="editor" type="text/plain" style="width:1024px;height:500px;">@Html.Raw(@Model.Content)</script>
+           </div>
+           <div class="consub">
+           <input type="submit" value="提交" id="button" />
+           </div>
+}

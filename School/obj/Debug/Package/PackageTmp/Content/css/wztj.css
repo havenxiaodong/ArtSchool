@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2014-09-10 18:26:31
+ * @version $Id$
+ */
+
+.conhead{
+    height: 184px;
+    background: #DBDBDB;
+    margin-bottom: 12px;
+}
+.conhead p{
+    text-align: center;
+    font-size: 28px;
+    font-family: Arial;
+    color: #fff;
+    background: #B3B3B3;
+    height: 54px;
+    line-height: 54px;
+}
+.titleedit{
+    padding-top: 19px;
+    padding-left: 24px;
+    font-weight: bold;
+    color: #5B5B5B;
+    font-size: 17px;
+}
+#biaoti{
+    height: 17px;
+    width:412px;
+    font-size: 15px;
+    line-height: 17px;
+    padding: 5px 0px 5px 4px;
+}
+.select{
+    height: 27px;
+    width: 117px;
+    background-color: #D5D5D5;
+    border: solid 1px #888;
+}
+.text{
+    width: 116px;
+    height: 17px;
+    font-size:15px;
+    line-height: 17px;
+    padding: 5px 0px 5px 4px;
+}
+.conedit{
+    height: 97px;
+    background: #aaa;
+}
+.conbody{
+    height: 653px;
+    background: #ddd;
+}
+.consub{
+    height: 89px;
+    margin: 34px 0px 25px;
+    background: #0375D6;
+}
+#button{
+    height: 58px;
+    width: 164px;
+    background: #55a1df;
+    margin-right: 88px;
+    margin-top: 16px;
+    float: right;
+    color: #fff;
+    font-size: 38px;
+    font-weight: bold;
+
+}
+.feet
+{
+    font-size: 20px;
+    color: #777;
+    position:absolute;
+    bottom:0px;
+    text-align:center;
+    padding-left:300px;
+}
+ 

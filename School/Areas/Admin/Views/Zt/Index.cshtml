@@ -1,0 +1,83 @@
+﻿@model IEnumerable<School.Models.ztmangerSet>
+<p>
+    @Html.ActionLink("添加", "Creat")
+</p>
+<div class="conhead">
+                        <p>文章管理</p>
+                        <div class="titleedit">
+                                        <script language=javascript>
+
+                                            function g(formname) {
+
+                                                var url = "http://www.baidu.com/baidu";
+
+                                                formname.ct.value = "2097152";
+
+                                                formname.action = url;
+
+                                                return true;
+
+                                            }
+
+                                        </script>
+                                        <form name="f1" onsubmit="return g(this)" target="_blank">
+
+                                        <table style="font-size:9pt;">
+
+                                        <td>
+
+                                        <span>文章类别 : </span>
+
+                                        <select class="select">
+
+                                            <option value="首页">教务管理</option>
+
+                                        </select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                                        <input name=word  class="text">
+
+                                        <input type="submit" class="submit" value="搜索"><br>
+
+                                        <input name=tn type=hidden value="bds">
+
+                                        <input name=cl type=hidden value="3">
+
+                                        <input name=ct type=hidden>
+
+                                        <input name=si type=hidden value="art.cumt.edu.cn">
+
+                                        </td>
+
+                                        </table>
+
+                                        </form>
+
+                        </div>
+                </div>
+                
+                <div class="conedit">
+                     <p>
+                            <span class="span1">ID</span>
+                            <span class="span2">文章名称</span>
+                            
+                            <span class="span4">发布时间</span>
+                            <span class="span5">编辑/删除</span>
+                    </p>
+                </div>
+                
+            <div class="conbody">
+                @{
+                    int k=1;
+                    foreach(var item in Model)
+                    {
+                        <p>
+                            <span class="span1">@(k++)</span>
+                            <span class="span2">@item.title</span>
+                            
+                            <span class="span4">@DataBinder.Eval(item.time, "date", "{0:MM-dd}")</span>
+                            <span class="span5"><a href="#0>">@Html.ActionLink("编辑", "Edit", new { id = item.ID })</a> |
+                            <a href="#0">@Html.ActionLink("删除", "Delete", new { id = item.ID })</a></span>
+                        </p><br />
+                    }
+                 }
+            </div>

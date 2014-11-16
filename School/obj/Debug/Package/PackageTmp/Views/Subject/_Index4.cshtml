@@ -1,0 +1,16 @@
+﻿@model List<School.Models.SubjectSet>
+@{
+   Layout = "~/Views/Shared/_Index.cshtml";
+}
+<ul class="center-title">
+    <li><a href="@Url.Action("_Index1","Subject")">办学体系</a></li>
+    <li><a href="@Url.Action("_Index2","Subject")">学科设置</a></li>
+    <li><a href="@Url.Action("_Index3","Subject")">硕士点</a></li>
+    <li  class="active"><a href="@Url.Action("_Index4","Subject")">学术交流</a></li>
+</ul>
+<div class="center-body">
+                @foreach (var mm in Model)
+                {
+                @Html.Raw(@mm.content)
+                }
+            </div>

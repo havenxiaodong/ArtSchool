@@ -1,0 +1,16 @@
+﻿@model IEnumerable<School.Models.TszhSet>
+
+<div class="newsBox common-news fl last">
+            <span class="fl"><a>他山之石</a></span>
+            <a class="fr"></a>
+            <ul>
+             @{
+                int k = 1;
+                foreach(var item in Model)
+                {
+                   <li> @Html.ActionLink((k++).ToString() + "." + item.Title, "TszhDetials", new { id = item.ID })&nbsp<em>...</em></li>
+                }
+                }
+                
+            </ul>
+        </div>

@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+#touxiang {
+	width:930px;
+	font-size:16px;
+	background-color:#FFF;
+	border-top:88px #FFF solid;
+}
+.touxiang1 {
+	margin:0;
+	padding:0;
+	border-top:#FFF solid 53px;
+	border-left:#FFF solid 54px;
+	border-right:#FFF solid 54px;
+	background-color:#FFF;
+	height:268px;
+	width:202px;
+	float:left;
+}
+.touxiang1 p, .touxiang2 p {
+	line-height:28px;
+}
+.touxiang2 {
+	margin:0;
+	padding:0;
+	border-top:#FFF solid 124px;
+	border-left:#FFF solid 54px;
+	border-right:#FFF solid 54px;
+	background-color:#FFF;
+	height:305px;
+	width:202px;
+	float:left;
+}
+#footer2 {
+	height:254px;
+	width:881px;
+	border-left:25px #FFF solid;
+	border-right:25px #FFF solid;
+	background-color:#FFF;
+	margin:auto;
+}
+#footer2 a:link {
+	text-decoration:none;
+	color:#F00!important;
+}
+#footer2 a:visited{
+	color:#F00;}
+.font1 {
+	font-size:18px;
+}
+.font2 {
+	font-size:14px;
+}
+#content_nowleader{
+	height:870px;
+	}

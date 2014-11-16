@@ -1,0 +1,41 @@
+﻿@model School.Models.NewsSet
+
+@{
+    ViewBag.Title = "新闻管理";
+}
+
+<h2>新闻管理</h2>
+
+<fieldset>
+    <legend>新闻详情</legend>
+
+    <div class="display-label">标题:@Html.DisplayFor(model => model.Title)</div>
+    <div class="display-field">
+        
+    </div>
+
+    <div class="display-label">类别:@Html.DisplayFor(model => model.Kind)</div>
+    <div class="display-field">
+        
+    </div>
+
+    <div class="display-label">时间:@Html.DisplayFor(model => model.Date)</div>
+    <div class="display-field">
+        
+    </div>
+
+    <div class="display-label">作者:@Html.DisplayFor(model => model.Writer)</div>
+    <div class="display-field">
+        
+    </div>
+
+    <div class="display-label">状态： @Html.DisplayFor(model => model.Checked)</div>
+    <div class="display-label">正文</div>
+    <div class="display-field">
+        @Html.Raw(@Model.Content)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("返回新闻列表", "Index")
+</p>

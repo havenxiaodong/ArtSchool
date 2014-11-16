@@ -1,0 +1,20 @@
+﻿@model School.Models.ActivitySet
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+           <div class="conhead">
+                        <p>教务管理</p>
+                    <div class="titleedit">       
+                        <span>题目 : </span>
+                        <input name="Title" type="text" class ="text" value="@Model.Title" />
+                        <span>日期 : </span>
+                        <input name="Date" class ="text" type="text" value="@DateTime.Now.ToLocalTime()" />
+                    </div>
+           </div>                                     
+           <div>
+                <script name ="Content" id="editor" type="text/plain" style="width:1024px;height:500px;">@Html.Raw(@Model.Content)</script>
+           </div>
+           <div class="consub">
+           <input type="submit" value="提交" id="button" />
+           </div>
+}

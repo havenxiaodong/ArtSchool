@@ -1,0 +1,64 @@
+﻿@model PagedList<School.Models.TeaTeamSet>
+@using Webdiyer.WebControls.Mvc
+@{
+    Layout = "~/Views/Shared/_TeaList.cshtml";
+}
+<div class="content ">
+            <p class="title fl"><a href="@Url.Action("_Tealist1","TeaTeam")">艺术设计</a></p>
+            <p class="title fl"><a href="@Url.Action("_Tealist2","TeaTeam")">工业设计</a></p>
+            <p class="title fl"><a href="@Url.Action("_Tealist3","TeaTeam")">音乐系</a></p>
+            <div class="clear"></div>
+            <div class="center">
+            <ul class="center_nav fl">
+            @{ 
+                int s = 1;
+      
+                foreach (var mm in Model)
+                {
+                    
+            
+                
+                    
+                    <li><a>@Html.ActionLink((s++).ToString() + "." + mm.name, "TeaDetails", new { id = mm.ID })</a> </li>
+                
+                }
+                }
+                </ul>
+                <div class="center_body fl">
+                @foreach (var mm in Model)
+                {
+                    <ul>
+                        <li><a href="@Url.Action("TeaDetails", "TeaTeam", new { id = mm.ID })"><img id="imgsp" src="@mm.photo" alt="@mm.name" /></a></li>
+                    </ul>
+                }
+                
+                </div>
+                <div style="padding:0px  auto 0px auto">
+        <a> @Html.Pager(Model,
+            new PagerOptions
+            {
+                NextPageText = "下一页",
+                PrevPageText = "上一页",
+                FirstPageText = "首页",
+                LastPageText = "末页",
+                PageIndexParameterName = "News",
+                CssClass = "pages",
+                CurrentPagerItemWrapperFormatString = "<span class=\"cpb\">{0}</span>",
+                NumericPagerItemWrapperFormatString = "<span class=\"item\">{0}</span>",
+                NumericPagerItemCount=6
+            },
+                null,
+                new
+                {
+                    id = ViewBag.columnId,
+                    classId = ViewBag.classId
+                })
+                </a>
+         </div>
+            </div>
+                
+            <div class="footer">
+                <center>版权所有：中国矿业大学艺术与设计学院 <a href="@Url.Action("LogOn", "Account", new { area = "Admin" })">管理员登录</a> </center>
+                <center>地址：江苏省徐州市大学路1号中国矿业大学南湖校区 | 电话：0516-8359199 | 传真：0516-83591999</center>
+            </div>
+        </div>

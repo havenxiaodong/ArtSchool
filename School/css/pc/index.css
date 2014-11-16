@@ -1,0 +1,558 @@
+/*
+    电脑版样式
+
+*/
+body{
+    width: 100%;
+    height: 100%;
+}
+.header{
+    max-width: 1366px;
+    width: 100%;
+    height: 510px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header .art{
+    width: 150px;
+    height: 28px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+
+}
+.header .art img{
+    max-width: 44px;
+    width: 31.428%;
+    height: auto;
+}
+.header .art .rectangular{
+    width: 0.714%;
+    height: 28px;
+    max-height: 28px;
+    background: #a0a0a0;
+    margin-left: 5.714%;
+    margin-right: 5.714%;
+}
+.header .art p{
+    font-size: 11px;
+    color: #a0a0a0;
+   line-height: 1em;
+}
+.header .art .p1{
+   width: 6em;
+
+}
+.header .art .p2{
+    width: 13em;
+    margin-left: 60px;
+    margin-top: -10px;
+}
+
+.header .mainShow{
+    width: 100%;
+    max-width: 1900px;
+    height:auto;
+    position: relative;
+    z-index: 2334;
+
+}
+.header .mainShow #bg{
+    position: absolute;
+    left: 0px;
+   top: 0px;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+.header .mainShow .nav{
+    width: 100%;
+    height:8.062%;
+    background: #af1a31;
+    position: relative;
+    z-index: 2334;
+}
+.header .mainShow .nav .firstNav{
+    width: 66.4444%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 52px;
+}
+.header .mainShow .nav .firstNav>li{
+    float: left;
+    width:10%;
+    min-width: 4em;
+    height: 100%;
+    line-height: 52px;
+    text-align: center;
+}
+
+.header .mainShow .nav .firstNav>li>a{
+    display: inline-block;
+    font-size: 16px;
+    width: 4em;
+    color: white;
+
+}
+.header .mainShow .nav .firstNav li a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+.header .mainShow .nav .firstNav .secondNav{
+    display: none;
+}
+.header .mainShow .nav .firstNav .secondNav li{
+    width: 100%;
+    height: 30px;
+    background: #ca2e49;
+    margin-bottom: 1px;
+    line-height:30px;
+    text-align: center;
+
+}
+.header .mainShow .nav .firstNav .secondNav li a{
+    display: block;
+    font-size: 14px;
+
+    color: white;
+}
+.header .mainShow .nav .search{
+    margin-top: -42px;
+    margin-right: 30px;
+
+}
+.nav .search input[type=text]{
+    height: 30px;
+    border: 1px solid #dadada;
+    border-right: none;
+    border-radius: 10px 0px 0px 10px;
+    text-indent: 1em;
+}
+.nav .search input[type=image]{
+    width: 19px;
+    height: 16px;
+    padding:7px 5px;
+    border:1px solid #dadada;
+    border-left: none;
+    border-radius:  0px 10px 10px 0px ;
+    background: #ffffff;
+}
+.header .mainShow .showAD{
+    height: 106px;
+    width:576px;
+    margin-left:15.805% ;
+    margin-top: 130px;
+    position: relative;
+    z-index: 2334;
+
+}
+.header .mainShow .showAD img{
+    max-width: 169px;
+    height: auto;
+    margin-right: 6.194%;
+
+}
+.header .mainShow .showAD p{
+    font-size: 46px;
+    color: white;
+
+    
+}
+.header .mainShow .showAD .p1{
+    margin-top: 5px;
+}
+.header .mainShow .showAD .p2{
+    font-size: 33px;
+
+}
+.header .mainShow #slogan{
+    font-size: 25px;
+    color: white;
+    margin-top: 160px;
+    width: 13em;
+    margin-left: 62.957%;
+    position: relative;
+    z-index: 2334;
+
+
+
+}
+.header .mainShow .cumtLogo{
+    width: 223px;
+    height: 52px;
+    float: right;
+    margin-right: 2.196%;
+    margin-top: 66px;
+    position: relative;
+    z-index: 2334;
+
+}
+.header .mainShow .triangle {
+    clear: both;
+    width: 75.407%;
+    height: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 2334;
+}
+
+
+.header .mainShow .triangle div {
+
+    float: left;
+    width: 0px;
+    height: 0px;
+    margin-left: 6.286%;
+    margin-right: 7.858%;
+    border-style:  dashed dashed  solid dashed;
+    border-width: 10px;
+    border-color:  transparent  transparent #ffffff transparent;
+    visibility: hidden;
+
+}
+/*.........................................字体图标..................................................................*/
+
+
+@font-face {
+    font-family: 'email';
+    src: url('../../fonts/email/icomoon.eot');
+    src: url('../../fonts/email/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/email/icomoon.woff') format('woff'),
+    url('../../fonts/email/icomoon.ttf') format('truetype'),
+    url('../../fonts/email/icomoon.svg#uxicomoon') format('svg');
+}
+@font-face {font-family: 'guide';
+    src: url('../../fonts/guide/icomoon.eot');
+    src: url('../../fonts/guide/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/guide/icomoon.woff') format('woff'),
+    url('../../fonts/guide/icomoon.ttf') format('truetype'),
+    url('../../fonts/guide/icomoon.svg#uxicomoon') format('svg');
+}
+@font-face {font-family: 'more';
+    src: url('../../fonts/more/icomoon.eot');
+    src: url('../../fonts/more/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/more/icomoon.woff') format('woff'),
+    url('../../fonts/more/icomoon.ttf') format('truetype'),
+    url('../../fonts/more/icomoon.svg#uxicomoon') format('svg');
+}
+@font-face {font-family: 'subject';
+    src: url('../../fonts/subject/icomoon.eot');
+    src: url('../../fonts/subject/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/subject/icomoon.woff') format('woff'),
+    url('../../fonts/subject/icomoon.ttf') format('truetype'),
+    url('../../fonts/subject/icomoon.svg#uxicomoon') format('svg');
+}
+@font-face {font-family: 'teaching';
+    src: url('../../fonts/teaching/icomoon.eot');
+    src: url('../../fonts/teaching/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/teaching/icomoon.woff') format('woff'),
+    url('../../fonts/teaching/icomoon.ttf') format('truetype'),
+    url('../../fonts/teaching/icomoon.svg#uxicomoon') format('svg');
+}
+@font-face {font-family:'web';
+    src: url('../../fonts/web/icomoon.eot');
+    src: url('../../fonts/web/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/web/icomoon.woff') format('woff'),
+    url('../../fonts/web/icomoon.ttf') format('truetype'),
+    url('../../fonts/web/icomoon.svg#uxicomoon') format('svg');
+}
+@font-face {font-family: 'works';
+    src: url('../../fonts/works/icomoon.eot');
+    src: url('../../fonts/works/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/works/icomoon.woff') format('woff'),
+    url('../../fonts/works/icomoon.ttf') format('truetype'),
+    url('../../fonts/works/icomoon.svg#uxicomoon') format('svg');
+}
+/*.........................................字体图标..................................................................*/
+.fontIcon{
+    width: 980px;
+    height: 140px;
+    margin-left: auto;margin-right: auto;
+
+}
+.fontIcon .iconBox{
+    margin-right: 8.0527%;
+}
+.fontIcon i{
+    font-size:88px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;
+    color:#999595;
+}
+
+
+i:hover{
+    color: #db7063;
+    cursor: pointer;
+}
+.fontIcon .email{
+    font-family:'email';
+
+}
+.fontIcon .guide{
+    font-family:"guide" !important;
+    font-size: 80px;
+    padding-top: 15px;
+    padding-bottom: 8px;
+
+}
+.fontIcon .subject{
+    font-family: 'subject' !important;
+    font-size: 90px;
+    padding-top: 12px;
+}
+.fontIcon .teaching{
+    font-family: 'teaching' !important;
+    font-size: 90px;
+    padding-top: 12px;
+}
+.fontIcon .web{
+    font-family: 'web' !important;
+    font-size: 90px;
+    padding-top: 12px;
+}
+.fontIcon .works{
+    font-family: 'works' !important;
+    font-size: 90px;
+    padding-top: 12px;
+}
+.fontIcon .last{
+    margin-right:0px;
+}
+.fontIcon p{
+    height: 1.5em;
+    color: #000000;
+    margin-top: 20px;
+    margin-left: 1.5em;
+}
+.fontIcon p a
+{
+   color:#000;
+    }
+.line1{
+    width: 76.407%;
+    max-width: 1018px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2px;
+    background: #E6E6E6;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.content,.footer{
+    width:1037px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content .banner{
+    width: 489px;
+    height: 273px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    margin-bottom: 45px;
+}
+.content .banner .show {
+    width: 489px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index:2;
+
+}
+.content .banner .show li{
+    width: 489px;
+    height: 273px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+
+}
+.content .banner .number{
+    width: 160px;
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 240px;
+    z-index: 222;
+}
+.content .banner .number li{
+    margin-right: 10px;
+    float: left;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #dddcdc;
+}
+.content .banner .number .active{
+    background:#2db3f8;
+}
+.content .college-news{
+    margin-left: 4.893%;
+    width: 468px;
+    height: 273px;
+}
+.content .newsBox>span a{
+    color: #db7063;
+    font-size: 17px;
+}
+.content .newsBox>span{
+    color: #db7063;
+    font-size: 17px;
+}
+.content .newsBox>a{
+    font-size: 17px;
+    color: #8d8d8d;
+}
+.content .college-news ul{
+    clear: both;
+    padding-top: 5px;
+    height: 240px;
+}
+.content .common-news ul{
+    clear: both;
+    padding-top: 5px;
+    height: 195px;
+    overflow: hidden;
+}
+.content .newsBox ul li{
+    width: 100%;
+    height: 23px;
+    margin-top: 5px;
+    float: left;
+}
+.content .newsBox ul i{
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background: #696161;
+    float: left;
+    margin-top: 8px;
+    margin-right: 1.973%;
+}
+.content .newsBox{
+    margin-bottom: 45px;
+
+}
+.content .newsBox ul a{
+    font-size: 15px;
+    color: #8d8d8d;
+
+    overflow: hidden;
+    display: block;
+    float: left;
+    height: 1.2em;
+}
+.content .college-news ul a{
+    width: 25em;
+}
+.content .newsBox ul a:hover{
+
+    color: #db7063;
+}
+.content .newsBox ul span{
+    
+    margin-left: 16px;
+    font-size: 15px;
+    color: #8d8d8d;
+}
+.content .line{
+    width: 100%;
+    height: 2px;
+    background: #E6E6E6;
+
+
+}
+.content .common-news{
+    width: 315px;
+    margin-right: 3.532%;
+    margin-top: 48px;
+}
+.content .last{
+    margin-right: 0px;
+}
+.content .common-news ul a{
+    max-width: 20em;
+
+}
+.content em{
+    color: #8d8d8d;
+}
+.content .interest{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.content .interest span{
+    font-size: 16px;
+    color: #db7063;
+    letter-spacing:normal;
+    margin-right: 5.893%;
+}
+.content .interest a{
+    font-size: 16px;
+    color: #a0a0a0;
+    letter-spacing:normal;
+    margin-right: 2.893%;
+}
+.content .interest .border{
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 1px solid #a0a0a0;
+    border-right: 1px solid #a0a0a0;
+}
+.content .links .links-nav li{
+    float: left;
+    font-size: 16px;
+    margin-right: 8.4479%;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #a0a0a0;
+    border-right: 1px solid #a0a0a0;
+    color: #a0a0a0;
+    margin-bottom: 12px;
+    margin-top: 30px;
+}
+
+.content .links .links-nav .first{
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 0px;
+    color: #db7063;
+    margin-right: 5.4479%;
+}
+.content .links .fl li{
+    line-height: 2em;
+}
+.content .links .fl a{
+    font-size: 13px;
+    color: #a0a0a0;
+}
+/*。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。*/
+.footer li{
+    float: left;
+    margin-right: 4.322%;
+    font-size: 13px;
+    color: #a0a0a0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.footer .first{
+    color: #db7063 ;
+    font-size: 16px;
+}
+.footer li span{
+    display: inline-block;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-left: 1px solid #a0a0a0;
+    border-right: 1px solid #a0a0a0;
+}

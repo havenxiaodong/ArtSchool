@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2014-10-09 23:27:31
+ * @version $Id$
+ */
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+body{
+    background: url("background.jpg");
+    background-repeat: repeat-x;
+}
+#box{
+    width: 321px;
+    height: 271px;
+    margin: 60px 0px 31px 326px;
+    border: 1px solid #ccc;
+    background: #E5F2FB;
+    background-image: url("../../content/images/box-bg.png") ;
+    background-repeat: no-repeat;
+    padding: 121px 47px 0px 0px;
+}
+input[type="text"],input[type="password"]{
+    height: 36px;
+    width: 254px;
+    padding-left: 3px;
+    margin-left:  64px;
+    background: #ccc;
+    margin:1px 64px;
+}
+input[type="submit"]{
+    height: 43px;
+    width: 156px;
+    color: #fff;
+    background: #F0574F;
+    font-size: 20px;
+    font-family: 黑体;
+    margin: 10px 47px 10px 164px;
+
+}
+a{
+    text-decoration: none;
+    color: #888;
+}
+#box p{
+    font-size: 12px;
+    color: #888;
+    margin:2px 0px 4px 294px;
+}
+#box .bluebg{
+    height: 17px;
+    background: #0961A9;
+    margin: 0px;
+    width: 369px;
+}
+#feet{
+    width: 661px;
+    background: url("ft-bg.png") repeat-y;
+    height: 26px;
+    line-height: 26px;
+    margin: 0px auto 158px;
+    text-align: center;
+}

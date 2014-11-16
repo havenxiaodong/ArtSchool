@@ -1,0 +1,35 @@
+﻿@model School.Models.ztmangerSet
+
+@{
+    ViewBag.Title = "专题管理";
+}
+
+<h2>专题管理</h2>
+
+<fieldset>
+    <legend>专题管理</legend>
+
+    <div class="display-label">标题</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">时间</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.time)
+    </div>
+
+    <div class="display-label">来源</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.writer)
+    </div>
+
+    <div class="display-label">正文</div>
+    <div class="display-field">
+        @Html.Raw(@Model.content)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("返回列表", "Index")
+</p>
